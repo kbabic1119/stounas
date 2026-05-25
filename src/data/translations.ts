@@ -38,7 +38,7 @@ export const heroTranslations = {
     pill1: 'PLATUS ASORTIMENTAS',
     pill2: 'TIKSLUMAS IR ATIDUMAS',
     pill3: 'GREITAS PRISTATYMAS',
-    pill4: 'VISOS LIETUVOS APTYRITIS',
+    pill4: 'DIRBAME VISOJE LIETUVOJE',
     cta: 'SUSISIEKITE SU MUMIS',
   },
   EN: {
@@ -52,7 +52,7 @@ export const heroTranslations = {
     pill1: 'WIDE VARIETY',
     pill2: 'PRECISION & ATTENTION',
     pill3: 'FAST DELIVERY',
-    pill4: 'ALL LITHUANIA COVERAGE',
+    pill4: 'WE WORK ALL OVER LITHUANIA',
     cta: 'CONTACT US',
   },
   RU: {
@@ -66,7 +66,7 @@ export const heroTranslations = {
     pill1: 'ШИРОКИЙ АССОРТИМЕНТ',
     pill2: 'ТОЧНОСТЬ И ВНИМАНИЕ',
     pill3: 'БЫСТРАЯ ДОСТАВКА',
-    pill4: 'ОБСЛУЖИВАНИЕ ПО ВСЕЙ ЛИТВЕ',
+    pill4: 'РАБОТАЕМ ПО ВСЕЙ ЛИТВЕ',
     cta: 'СВЯЗАТЬСЯ С НАМИ',
   }
 };

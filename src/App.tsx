@@ -26,11 +26,12 @@ export default function App() {
           <img 
             src={backgroundImage}
             alt="Cemetery landscape background"
-            className="absolute inset-0 w-full h-full object-cover object-bottom opacity-15"
+            className="absolute inset-0 w-full h-full object-cover object-bottom"
           />
-          {/* Subtle gradient overlays to guarantee perfect text contrast */}
-          <div className="absolute inset-0 bg-neutral-950/80" />
-          <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/50 via-transparent to-neutral-950/80" />
+          {/* Exact gradient overlays from Hero section to guarantee identical visual look and readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/95 via-neutral-950/45 to-neutral-950/35 xl:from-neutral-950/80 xl:via-transparent xl:to-neutral-950/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 opacity-[0.01] bg-[url('https://www.transparenttextures.com/patterns/granite.png')]" />
         </div>
 
         {/* Top Header */}
