@@ -10,7 +10,7 @@ export default function Quality({ currentLang }: QualityProps) {
   const t = qualityTranslations[currentLang];
 
   return (
-    <section id="kokybe" className="py-24 bg-neutral-950 text-white relative">
+    <section id="kokybe" className="py-24 bg-transparent text-white relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(112,179,36,0.04),transparent_50%)]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

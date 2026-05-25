@@ -4,9 +4,10 @@ import { servicesTranslations, detailedServicesList } from '../data/translations
 
 interface ServicesProps {
   currentLang: 'LT' | 'EN' | 'RU';
+  hideDetailedList?: boolean;
 }
 
-export default function Services({ currentLang }: ServicesProps) {
+export default function Services({ currentLang, hideDetailedList = false }: ServicesProps) {
   const t = servicesTranslations[currentLang];
 
   const services = [
@@ -16,7 +17,7 @@ export default function Services({ currentLang }: ServicesProps) {
   ];
 
   return (
-    <section id="paslaugos" className="py-24 bg-[#141617] text-white relative">
+    <section id="paslaugos" className="py-24 bg-transparent text-white relative">
       <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -59,31 +60,31 @@ export default function Services({ currentLang }: ServicesProps) {
         </div>
 
         {/* Detailed Services Grid */}
-        <div className="border-t border-white/5 pt-20 mb-20">
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono font-bold tracking-[0.3em] text-brand-primary block uppercase">
-              // {t.detailed_title}
-            </span>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {detailedServicesList.map((item, idx) => (
-              <div 
-                key={idx}
-                className="bg-brand-dark border border-white/5 p-5 rounded-2xl flex items-center space-x-4 hover:border-brand-primary/30 hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(112,179,36,0.03)] transition-all duration-300 group"
-              >
-                <div className="w-8 h-8 rounded-lg bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-brand-dark transition-all duration-300 flex-shrink-0">
-                  <Check size={16} />
+        {!hideDetailedList && (
+          <div className="border-t border-white/5 pt-20 mb-20">
+            <div className="text-center mb-12">
+              <span className="text-xs font-mono font-bold tracking-[0.3em] text-brand-primary block uppercase">
+                // {t.detailed_title}
+              </span>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {detailedServicesList.map((item, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-brand-dark border border-white/5 p-5 rounded-2xl flex items-center space-x-4 hover:border-brand-primary/30 hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(112,179,36,0.03)] transition-all duration-300 group"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-brand-dark transition-all duration-300 flex-shrink-0">
+                    <Check size={16} />
+                  </div>
+                  <span className="text-zinc-200 text-sm font-semibold tracking-wide group-hover:text-white transition-colors">
+                    {item[currentLang]}
+                  </span>
                 </div>
-                <span className="text-zinc-200 text-sm font-semibold tracking-wide group-hover:text-white transition-colors">
-                  {item[currentLang]}
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-
-
+        )}
 
       </div>
     </section>

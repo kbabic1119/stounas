@@ -9,7 +9,7 @@ export default function About({ currentLang }: AboutProps) {
   const t = aboutTranslations[currentLang];
 
   return (
-    <section id="apie-mus" className="py-24 bg-[#141617] text-white overflow-hidden relative">
+    <section id="apie-mus" className="py-24 bg-transparent text-white overflow-hidden relative">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,rgba(112,179,36,0.06),transparent_40%)]" />
       

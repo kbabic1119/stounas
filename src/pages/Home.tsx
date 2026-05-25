@@ -25,7 +25,7 @@ export default function Home({ currentLang }: HomeProps) {
         }}
       />
       <About currentLang={currentLang} />
-      <Services currentLang={currentLang} />
+      <Services currentLang={currentLang} hideDetailedList={true} />
       <Quality currentLang={currentLang} />
       <Contact currentLang={currentLang} prefilledNotes={prefilledNotes} />
     </>

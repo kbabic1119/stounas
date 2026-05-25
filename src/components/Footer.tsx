@@ -20,7 +20,7 @@ export default function Footer({ currentLang }: FooterProps) {
   };
 
   return (
-    <footer className="bg-neutral-950 text-white border-t border-white/5 pt-16 pb-8 text-xs sm:text-sm">
+    <footer className="bg-neutral-950 text-white border-t border-white/5 pt-16 pb-8 text-xs sm:text-sm relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main top grid */}

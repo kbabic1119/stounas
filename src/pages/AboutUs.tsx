@@ -6,7 +6,7 @@ interface AboutUsProps {
 
 export default function AboutUs({ currentLang }: AboutUsProps) {
   return (
-    <div className="pt-24 min-h-screen bg-neutral-950">
+    <div className="pt-24 min-h-screen bg-transparent">
       <About currentLang={currentLang} />
     </div>
   );

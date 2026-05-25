@@ -6,7 +6,7 @@ interface QualityPageProps {
 
 export default function QualityPage({ currentLang }: QualityPageProps) {
   return (
-    <div className="pt-24 min-h-screen bg-neutral-950">
+    <div className="pt-24 min-h-screen bg-transparent">
       <Quality currentLang={currentLang} />
     </div>
   );

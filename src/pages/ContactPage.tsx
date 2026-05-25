@@ -6,7 +6,7 @@ interface ContactPageProps {
 
 export default function ContactPage({ currentLang }: ContactPageProps) {
   return (
-    <div className="pt-24 min-h-screen bg-neutral-950">
+    <div className="pt-24 min-h-screen bg-transparent">
       <Contact currentLang={currentLang} prefilledNotes="" />
     </div>
   );
