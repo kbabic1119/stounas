@@ -4,6 +4,7 @@ import backgroundImage from './bg_compressed.jpg';
 import polishedBlackGranite from './polished_black_granite.png';
 import speckledGrayGranite from './speckled_gray_granite.png';
 import auroraRedGranite from './aurora_red_granite.png';
+import Logo from './Logo';
 
 interface HeroProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -323,10 +324,15 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
           </div>
 
           {/* Right Hero Image Column representing the mock image setup exactly */}
-          <div className="lg:col-span-12 xl:col-span-5 relative w-full flex flex-col items-center justify-center min-h-[450px] lg:min-h-[550px] animate-fade-in order-last xl:order-none">
+          <div className="lg:col-span-12 xl:col-span-5 relative w-full flex flex-col items-center justify-center min-h-[450px] lg:min-h-[550px] animate-fade-in order-last xl:order-none pt-12 xl:pt-0">
             
+            {/* Logo on top - ONLY for mobile (hidden on xl) */}
+            <div className="xl:hidden flex justify-center mb-6">
+              <Logo className="w-16 h-16 filter drop-shadow-[0_4px_12px_rgba(112,179,36,0.3)]" />
+            </div>
+
             {/* Dark Stone wall textured outline bounding box */}
-            <div className="absolute inset-0 border border-white/5 rounded-3xl bg-neutral-900/40 backdrop-blur-sm shadow-inner p-6 flex items-center justify-center overflow-hidden">
+            <div className="relative xl:absolute xl:inset-0 w-full h-[400px] xl:h-full border border-white/5 rounded-3xl bg-neutral-900/40 backdrop-blur-sm shadow-inner p-6 flex items-center justify-center overflow-hidden">
               <div 
                 className="absolute inset-0 bg-cover bg-center grayscale opacity-15"
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800')` }}
@@ -402,8 +408,8 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
 
                 </div>
 
-                {/* Floating 3D Logo Shield on the right side over-laying monuments */}
-                <div className="absolute top-8 right-8 z-10 w-24 h-24 transform hover:scale-110 hover:rotate-3 transition-all duration-300 drop-shadow-[0_4px_15px_rgba(112,179,36,0.35)]">
+                {/* Floating 3D Logo Shield on the right side over-laying monuments - Hidden on mobile */}
+                <div className="hidden xl:block absolute top-8 right-8 z-10 w-24 h-24 transform hover:scale-110 hover:rotate-3 transition-all duration-300 drop-shadow-[0_4px_15px_rgba(112,179,36,0.35)]">
                   <svg viewBox="0 0 100 100" className="w-full h-full">
                     {/* Outer Hexagon frame */}
                     <polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="#131516" stroke="#70b324" strokeWidth="4" />
@@ -431,11 +437,11 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
               </div>
             </div>
 
-            {/* Bottom-right Green CTA Button floating matching image layout */}
-            <div className="absolute right-0 bottom-4 z-20">
+            {/* Bottom-right Green CTA Button floating matching image layout - Centered on mobile */}
+            <div className="mt-8 xl:mt-0 xl:absolute xl:right-0 xl:bottom-4 z-20 w-full xl:w-auto flex justify-center xl:block">
               <button
                 onClick={onContactClick}
-                className="group flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-dark text-black font-extrabold px-6 py-4.5 rounded-2xl shadow-[0_4px_20px_rgba(112,179,36,0.35)] transition-all duration-300 transform active:scale-95 text-sm uppercase tracking-wider"
+                className="group flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-dark text-black font-extrabold px-6 py-4.5 rounded-2xl shadow-[0_4px_20px_rgba(112,179,36,0.35)] transition-all duration-300 transform active:scale-95 text-sm uppercase tracking-wider w-full max-w-xs justify-center xl:w-auto xl:max-w-none"
               >
                 <span>{t.cta}</span>
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1.5" />
