@@ -1,72 +1,12 @@
 import { Shield, Sparkles, Gem, Award, Wrench } from 'lucide-react';
+import { aboutTranslations } from '../data/translations';
 
 interface AboutProps {
   currentLang: 'LT' | 'EN' | 'RU';
 }
 
 export default function About({ currentLang }: AboutProps) {
-  const t = {
-    LT: {
-      headline: 'APIE MB STOUNAS',
-      title: 'Aukščiausios kokybės granitas ir profesionalus meistriškumas',
-      p1: 'MB „Stounas“ yra patikimas Jūsų partneris didmeninėje granito prekyboje ir kapaviečių projektavimo bei įrengimo paslaugose visoje Lietuvoje. Sukaupę didžiulę patirtį, deriname modernią akmens apdirbimo technologiją su autentišku meistriškumu.',
-      p2: 'Tiesiogiai iš didžiausių Švedijos, Suomijos bei Norvegijos karjerų importuojame aukščiausios klasės akmenį. Mūsų misija – įamžinti atminimą ilgaamžiais gaminiais, kurie atlaiko laiko išbandymus ir atšiaurias klimato sąlygas.',
-      stat1_num: '15+',
-      stat1_txt: 'Metų patirtis',
-      stat2_num: '1200+',
-      stat2_txt: 'Įrengta kapaviečių',
-      stat3_num: '100%',
-      stat3_txt: 'Kokybės garantija',
-      stat4_num: '24/7',
-      stat4_txt: 'Profesionali pagalba',
-      val1_title: 'Ilgaamžis patvarumas',
-      val1_desc: 'Naudojame tik geriausią natūralų šiaurietišką granitą, žinomą savo tankumu ir atsparumu temperatūrų svyravimams.',
-      val2_title: 'Tiksli gamyba',
-      val2_desc: 'Mūsų gamyboje atliekami kompiuteriniai akmens pjovimai bei gręžimai, užtikrinantys milimetrų tikslumą montuotojams.',
-      val3_title: 'Sklandus montavimas',
-      val3_desc: 'Ruošiame armuotus betoninius pamatus, apsaugančius paminklus nuo nusėdimo, pakrypimo ar įtrūkimų bėgant metams.',
-    },
-    EN: {
-      headline: 'ABOUT MB STOUNAS',
-      title: 'Premium Quality Granite and Professional Craftsmanship',
-      p1: 'MB "Stounas" is your reliable partner in wholesale granite sales, grave design, and installation services throughout Lithuania. With years of experience, we combine state-of-the-art stone processing technologies with authentic stone masonry.',
-      p2: 'We import top-grade blocks directly from Swedish, Finnish, and Norwegian quarries. Our mission is to preserve memories through durable products that withstand seasonal extremes and the test of time.',
-      stat1_num: '15+',
-      stat1_txt: 'Years of Experience',
-      stat2_num: '1200+',
-      stat2_txt: 'Completed Sites',
-      stat3_num: '100%',
-      stat3_txt: 'Quality Warranty',
-      stat4_num: '24/7',
-      stat4_txt: 'Professional Support',
-      val1_title: 'Everlasting Durability',
-      val1_desc: 'We use only top-grade Nordic granite, highly praised for its ultimate density and frost resistance.',
-      val2_title: 'Precision Manufacturing',
-      val2_desc: 'Computerized stone cutting and polishing ensure millimeter precision for flawless field installation.',
-      val3_title: 'Reinforced Foundations',
-      val3_desc: 'We construct thick, reinforced concrete basements preventing tombstone sinking or ground shifting over decades.',
-    },
-    RU: {
-      headline: 'О MB STOUNAS',
-      title: 'Высококачественный гранит и профессиональное мастерство',
-      p1: 'MB "Stounas" — ваш надежный партнер в сфере оптовой продажи гранита, индивидуального проектирования и благоустройства могил по всей Литве. Мы совмещаем современные технологии и традиционное мастерство.',
-      p2: 'Мы поставляем гранитные блоки напрямую из крупнейших карьеров Швеции, Финляндии и Норвегии. Наша цель — увековечить память усопших надежными изделиями, выдерживающими любые климатические условия.',
-      stat1_num: '15+',
-      stat1_txt: 'Лет Опыта',
-      stat2_num: '1200+',
-      stat2_txt: 'Обустроенных могил',
-      stat3_num: '100%',
-      stat3_txt: 'Гарантия Качества',
-      stat4_num: '24/7',
-      stat4_txt: 'Персональная помощь',
-      val1_title: 'Вечная прочность',
-      val1_desc: 'Мы используем только сертифицированный скандинавский гранит высокой плотности.',
-      val2_title: 'Точное производство',
-      val2_desc: 'Компьютерная резка и обработка камня гарантируют идеальную точность сборки.',
-      val3_title: 'Усиленный фундамент',
-      val3_desc: 'Создаем прочные армированные фундаменты, предотвращающие крен и усадку памятника со временем.',
-    }
-  }[currentLang];
+  const t = aboutTranslations[currentLang];
 
   return (
     <section id="apie-mus" className="py-24 bg-[#141617] text-white overflow-hidden relative">

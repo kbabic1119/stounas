@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
+import { footerTranslations } from '../data/translations';
 
 interface FooterProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -8,47 +9,7 @@ interface FooterProps {
 export default function Footer({ currentLang }: FooterProps) {
   const currentYear = 2026;
 
-  const t = {
-    LT: {
-      desc: 'Sertifikuoto natūralaus skandinaviško granito gamyba, tiesioginis didmeninis tiekimas bei kapaviečių projektavimo-apdailos darbai visoje Lietuvoje.',
-      links_title: 'Meniu Nuorodos',
-      home: 'Pradžia',
-      about: 'Apie mus',
-      services: 'Paslaugos',
-      quality: 'Kokybė',
-      legal_title: 'Saugumas & Teisinė info',
-      policy: 'Privatumo politika',
-      rules: 'Naudojimo taisyklės',
-      license: 'Verslo pažymos Nr. MB-843219',
-      rights: 'Visos teisės saugomos. Šis tinklalapis yra apsaugotas Lietuvos Respublikos autorių teisių įstatymo.',
-    },
-    EN: {
-      desc: 'Manufacturing of certified natural Scandinavian granite, direct wholesale deliveries, and graveyard landscape masonry setups throughout Lithuania.',
-      links_title: 'Quick Navigation',
-      home: 'Home',
-      about: 'About Us',
-      services: 'Services',
-      quality: 'Quality Warranty',
-      legal_title: 'Legal & Compliance',
-      policy: 'Privacy Policy',
-      rules: 'Terms of Use',
-      license: 'Business ID: MB-843219',
-      rights: 'All rights reserved. Replications without legal consent are strictly prohibited by active IP legislation.',
-    },
-    RU: {
-      desc: 'Производство сертифицированного скандинавского гранита, прямые оптовые поставки и благоустройство могил по всей территории Литвы.',
-      links_title: 'Карта сайта',
-      home: 'Главная',
-      about: 'О нас',
-      services: 'Услуги',
-      quality: 'Карантия качества',
-      legal_title: 'Правовая информация',
-      policy: 'Политика конфиденциальности',
-      rules: 'Правила пользования',
-      license: 'Идентификационный код: MB-843219',
-      rights: 'Все права защищены. Любое копирование материалов преследуется по закону Литовской Республики.',
-    }
-  }[currentLang];
+  const t = footerTranslations[currentLang];
 
   const handleScrollToId = (id: string, offset = 80) => {
     const el = document.getElementById(id);

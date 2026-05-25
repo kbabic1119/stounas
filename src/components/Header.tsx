@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
+import { headerTranslations } from '../data/translations';
 
 interface HeaderProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -27,29 +28,7 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const t = {
-    LT: {
-      about: 'Apie mus',
-      services: 'Paslaugos',
-      quality: 'Kokybė',
-      contact: 'Kontaktai',
-      callUs: 'Skambinti',
-    },
-    EN: {
-      about: 'About Us',
-      services: 'Services',
-      quality: 'Quality',
-      contact: 'Contacts',
-      callUs: 'Call Now',
-    },
-    RU: {
-      about: 'О нас',
-      services: 'Услуги',
-      quality: 'Качество',
-      contact: 'Контакты',
-      callUs: 'Позвонить',
-    }
-  }[currentLang];
+  const t = headerTranslations[currentLang];
 
   const menuItems = [
     { id: 'apie-mus', label: t.about, path: '/apie-mus' },

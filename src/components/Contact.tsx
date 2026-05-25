@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { contactTranslations } from '../data/translations';
 
 interface ContactProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -32,84 +33,7 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
       }
     }
   }, [prefilledNotes]);
-
-  const t = {
-    LT: {
-      headline: 'SUSISIEKITE SU MUMIS',
-      title: 'Aptarkime Jūsų projektą jau šiandien',
-      sub: 'Užpildykite kontaktinę formą arba kreipkitės nurodytais kontaktais tiesiogiai. Mūsų specialistai susisieks per 2 darbo valandas.',
-      name_lbl: 'Jūsų vardas / Įmonė',
-      phone_lbl: 'Telefono numeris',
-      email_lbl: 'El. pašto adresas',
-      msg_lbl: 'Papildomi projekto reikalavimai ar pasirinkimai',
-      send_btn: 'Siųsti užklausą',
-      sendingBtn: 'Užklausos siuntimas...',
-      success_title: 'Sėkmingai išsiųsta!',
-      success_desc: 'Dėkojame už kreipimąsi. MB „Stounas“ vadybininkas jau analizuoja Jūsų užklausą ir netrukus paskambins nurodytu telefonu.',
-      error_title: 'Klaida išsiunčiant',
-      error_desc: 'Prašome užpildyti privalomus laukelius (Vardą bei Telefoną).',
-      info_title: 'MŪSŲ KONTAKTAI',
-      address_lbl: 'Biuro & Gamybos adresas',
-      address_val: 'Pramonės g. 14, LT-11111 Vilnius, Lietuva',
-      work_lbl: 'Darbo laikas',
-      work_val1: 'I - V: 08:00 - 18:00',
-      work_val2: 'VI: 09:00 - 15:00 (Pagal išankstinį susitarimą)',
-      phone_lbl_title: 'Skambinkite mums',
-      email_lbl_title: 'Rašykite el. paštu',
-      map_guide: 'APTARNAUJAME VISOJE LIETUVOJE',
-      map_desc: 'Mūsų meistrai nemokamai atvyksta išmatuoti į bet kurį šalies kampelį, pasirūpindami visomis logistikos procedūromis.'
-    },
-    EN: {
-      headline: 'CONTACT US',
-      title: 'Discuss Your Project Today',
-      sub: 'Fill up the contact prompt form or reach out directly. Our stone masonry experts respond within 2 business hours.',
-      name_lbl: 'Your Name / Company',
-      phone_lbl: 'Phone Number',
-      email_lbl: 'Email Address',
-      msg_lbl: 'Additional Requirements or Budget Notes',
-      send_btn: 'Send Inquiry',
-      sendingBtn: 'Sending Inquiry...',
-      success_title: 'Inquiry Sent Successfully!',
-      success_desc: 'Thank you for reaching out. An expert from MB Stounas is already analyzing your estimate and will contact you shortly.',
-      error_title: 'Validation Failed',
-      error_desc: 'Please fill up the mandatory Name and Phone parameters.',
-      info_title: 'CONTACT DETAILS',
-      address_lbl: 'Office & Quarry Depot Address',
-      address_val: 'Pramones str. 14, LT-11111 Vilnius, Lithuania',
-      work_lbl: 'Working Hours',
-      work_val1: 'Mon - Fri: 08:00 - 18:00',
-      work_val2: 'Sat: 09:00 - 15:00 (Prior arrangement necessary)',
-      phone_lbl_title: 'Phone',
-      email_lbl_title: 'Email support',
-      map_guide: 'NATIONWIDE SERVICE AREA',
-      map_desc: 'Our specialists provide complimentary surveys and dimensions taking anywhere in Lithuania, arranging complete shipping.'
-    },
-    RU: {
-      headline: 'СВЯЗАТЬСЯ С НАМИ',
-      title: 'Обсудим ваш проект сегодня',
-      sub: 'Заполните форму обратной связи или позвоните напрямую. Менеджеры подготовят предложение в течение 2 рабочих часов.',
-      name_lbl: 'Ваше имя / Компания',
-      phone_lbl: 'Номер телефона',
-      email_lbl: 'Эл. почта',
-      msg_lbl: 'Параметры памятника или пожелания к проекту',
-      send_btn: 'Отправить запрос',
-      sendingBtn: 'Отправка запроса...',
-      success_title: 'Успешно отправлено!',
-      success_desc: 'Спасибо за ваше обращение. Специалисты MB "Stounas" уже обрабатывают вашу смету и свяжутся с вами в ближайшее время.',
-      error_title: 'Ошибка отправки',
-      error_desc: 'Пожалуйста, заполните имя и телефон.',
-      info_title: 'НАШИ КОНТАКТЫ',
-      address_lbl: 'Адрес офиса и производства',
-      address_val: 'Pramonės g. 14, LT-11111 Вильнюс, Литва',
-      work_lbl: 'Время работы',
-      work_val1: 'Пн - Пт: 08:00 - 18:00',
-      work_val2: 'Сб: 09:00 - 15:00 (По договоренности)',
-      phone_lbl_title: 'Контактный телефон',
-      email_lbl_title: 'Эл. почта',
-      map_guide: 'ОБСЛУЖИВАНИЕ ПО ВСЕЙ ЛИТВЕ',
-      map_desc: 'Наши замерщики бесплатно выезжают на могилы в любые районы Литвы со всеми образцами гранита.'
-    }
-  }[currentLang];
+  const t = contactTranslations[currentLang];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

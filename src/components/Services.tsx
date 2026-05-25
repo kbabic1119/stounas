@@ -1,76 +1,13 @@
 import React from 'react';
 import { Layers, Construction, FileSpreadsheet, Eye, ClipboardCheck, Ruler } from 'lucide-react';
+import { servicesTranslations } from '../data/translations';
 
 interface ServicesProps {
   currentLang: 'LT' | 'EN' | 'RU';
 }
 
 export default function Services({ currentLang }: ServicesProps) {
-  const t = {
-    LT: {
-      headline: 'PASLAUGOS IR DARBŲ EIGA',
-      title: 'Profesionalūs kapaviečių sprendimai nuo A iki Z',
-      serv1_title: 'Didmeninis tiekimas',
-      serv1_desc: 'Tiekiame granito blokus, pusgaminius, monumentus bei dengiamąsias plokštes akmens apdirbimo dirbtuvėms bei paminklų salonams visoje Lietuvoje palankiomis sąlygomis.',
-      serv2_title: 'Kapaviečių įrengimas',
-      serv2_desc: 'Pilnas kapo sutvarkymas: pamatų liejimas, paminklų montavimas, skaldos užpylimas arba uždengimas plokštėmis, apželdinimas bei priežiūra.',
-      serv3_title: '3D vizualizacijos',
-      serv3_desc: 'Prieš pradedant darbus, sukuriame tikroviškus kapavietės 3D maketus, kad užsakovas matytų realų būsimą rezultatą ir pasirinktų geriausią akmens derinį.',
-      serv4_title: 'Akmens pjovimas & Graviravimas',
-      serv4_desc: 'Kompiuterizuotas raidžių, portretų bei šventųjų paveikslų iškalimas gilaus graviravimo lazeriu būdu paveldo išsaugojimui.',
-      step_title: 'MŪSŲ DARBŲ PROCESAS',
-      step1_name: 'Nemokama konsultacija',
-      step1_desc: 'Išklausome norus, įvertiname kapavietės vietą bei paruošiame preliminarų biudžetą.',
-      step2_name: '3D Projektas & Derinimas',
-      step2_desc: 'Vizualizuojame projektą trimačiame plane, parenkame granito tekstūras bei atspalvius.',
-      step3_name: 'Betonavimas & Pamatas',
-      step3_desc: 'Liejame tvirtą armuotą gelžbetonį, atitinkantį visus statybos mechaninius reikalavimus.',
-      step4_name: 'Montavimas & Pridavimas',
-      step4_desc: 'Sumontuojame paminklus bei priedus, išlyginame aplinką ir atsiskaitome tik už pabaigtą kokybišką rezultatą.',
-    },
-    EN: {
-      headline: 'SERVICES & WORKFLOW',
-      title: 'Professional Grave Setup From Draft to Care',
-      serv1_title: 'Wholesale Sourcing',
-      serv1_desc: 'We supply high-grade granite blocks, semi-finished slabs, monuments, and covering panels to stonemason workshops and retail salons across Lithuania.',
-      serv2_title: 'Comprehensive Installation',
-      serv2_desc: 'Full cemetery arrangement: concrete basements pouring, headstone setups, gravel fillings, top slab coverings, and restoration works.',
-      serv3_title: 'Photorealistic 3D Drafts',
-      serv3_desc: 'Prior to site work, we build lifelike 3D mockups. This allows clients to preview the landscape and confidently pick granite color matching.',
-      serv4_title: 'Laser Engraving & Inscriptions',
-      serv4_desc: 'Computerized laser and sandblast carving of fonts, crosses, and relief portraits with deeply indented stone protection coatings.',
-      step_title: 'OUR STREAMLINED PROCESS',
-      step1_name: 'Free Consultation',
-      step1_desc: 'We carefully discuss your ideas, evaluate site topography, and outline estimated budget ranges.',
-      step2_name: '3D Design & Match',
-      step2_desc: 'We render the draft in a accurate 3D plane, picking granite grades and border styles with you.',
-      step3_name: 'Reinforced Concrete Foundation',
-      step3_desc: 'We pour steel-mesh reinforced premium concrete to safely anchor heavy granite works.',
-      step4_name: 'Flawless Setup',
-      step4_desc: 'We meticulously install monuments, level and clean the surrounding area for your final approval.',
-    },
-    RU: {
-      headline: 'УСЛУГИ И ЭТАПЫ РАБОТ',
-      title: 'Профессиональные решения для могил от А до Я',
-      serv1_title: 'Оптовые поставки',
-      serv1_desc: 'Поставка гранитных блоков, заготовок, готовых памятников и плит для камнерезных цехов и ритуальных салонов Литвы.',
-      serv2_title: 'Обустройство под ключ',
-      serv2_desc: 'Весь комплекс работ: заливка фундаментов, установка памятников, засыпка щебнем, укладка гранитных плит, озеленение.',
-      serv3_title: '3D Визуализация',
-      serv3_desc: 'Создаем трехмерную модель будущей могилы, чтобы вы могли увидеть сочетание камня и оценить дизайн до начала работ.',
-      serv4_title: 'Резерка & Компьютерная гравировка',
-      serv4_desc: 'Сверхточная гравировка букв, эпитафий и портретов на камне профессиональным пескоструйным и лазерным оборудованием.',
-      step_title: 'НАШ РАБОЧИЙ ПРОЦЕСС',
-      step1_name: 'Бесплатная Консультация',
-      step1_desc: 'Согласуем пожелания, оцениваем рельеф участка и подбираем ценовой диапазон.',
-      step2_name: '3D Дизайн-Проект',
-      step2_desc: 'Создаем эскиз с выбранным гранитом и декоративными элементами.',
-      step3_name: 'Заливка фундамента',
-      step3_desc: 'Заливаем надежный армированный бетонный цоколь с гидроизоляцией.',
-      step4_name: 'Монтаж и Сдача',
-      step4_desc: 'Монтируем памятник, гранитные ограды, убираем территорию и сдаем работу.',
-    }
-  }[currentLang];
+  const t = servicesTranslations[currentLang];
 
   const services = [
     { icon: <Layers size={32} />, title: t.serv1_title, desc: t.serv1_desc },

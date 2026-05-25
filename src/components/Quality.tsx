@@ -1,97 +1,13 @@
 import React from 'react';
 import { ShieldCheck, CheckSquare, Sparkles, Flame, Snowflake, Clock } from 'lucide-react';
+import { qualityTranslations } from '../data/translations';
 
 interface QualityProps {
   currentLang: 'LT' | 'EN' | 'RU';
 }
 
 export default function Quality({ currentLang }: QualityProps) {
-  const t = {
-    LT: {
-      headline: 'AUKŠČIAUSIŲ KOKYBĖS STANDARTŲ GARANTIJA',
-      title: 'Apie akmens kokybę mes nekalbame – mes ją sertifikuojame',
-      sub: 'Paminklas kapavietėje statomas dešimtmečiams. Todėl kiekvienam užsakymui priskiriame unikalų gamybos pasą ir naudojame tik sertifikuotą natūralų granitą.',
-      cert1_title: 'Sertifikuota kilmė',
-      cert1_desc: 'Visi mūsų blokai turi saugios kilmės deklaraciją iš didžiausių Skandinavijos karjerų.',
-      cert2_title: 'Maksimalus atsparumas atšilimui',
-      cert2_desc: 'Granitas tirtas dėl 50 šaldymo-atšildymo ciklų pavojaus Šiaurės Europos sąlygomis.',
-      cert3_title: 'Atsparumas samanoms ir pelėsiams',
-      cert3_desc: 'Itin kruopštus deimantinis poliravimas užpildo mikroporas, kad neaugtų joks aplinkos grybelis.',
-      cert4_title: 'Amžina atspalvio garantija',
-      cert4_desc: 'Taurusis natūralus akmuo, kuris neblunka tiesioginėje saulėje ir nekeičia atspalvio nuo pramoninio smogo.',
-      comp_title: 'Kodėl MB Stounas kokybė yra pranašesnė?',
-      comp_us: 'MB STOUNAS STANDARTAS',
-      comp_others: 'PIGIOS IMITACIJOS ATVEJAI',
-      us_list: [
-        'Tikras Švediškas, Suomiškas, Norvegiškas natūralus akmuo.',
-        'Sustiprinto liejimo pamatas su armatūros tinklais.',
-        'Raidžių graviravimas atliekamas giliuoju, ilgaamžiu mechaniniu frezavimu.',
-        'Profiliuotas sandarinimas deimantinėmis sandarinimo juostomis.'
-      ],
-      others_list: [
-        'Presuoto akmens dulkės, pigus dirbtinis kompozitas iš trečiųjų šalių.',
-        'Plonas, nearmuotas cementas, kuris sutrūkinėja per pirmąją žiemą.',
-        'Paviršinis, nekokybiškas graviravimas, kuris nusidėvi po kelerių metų.',
-        'Paprastas silikonas arba prastos kokybės klijai, pagelstantys ir subyrantys.'
-      ]
-    },
-    EN: {
-      headline: 'SUPREME QUALITY STANDARDS WARRANTY',
-      title: 'We Do Not Just Talk Quality – We Certify It',
-      sub: 'Cemetery monuments are built to last generations. Therefore we assign a unique manufacturing passport and use only certified, pure natural granite.',
-      cert1_title: 'Certified Origin',
-      cert1_desc: 'All blocks contain a documented geo-origin passport from Europe\'s leading quarries.',
-      cert2_title: 'Ultimate Frost Protection',
-      cert2_desc: 'Granite is stress-tested against 50 thermal expansion freeze cycles under Arctic conditions.',
-      cert3_title: 'Moss & Algae Prevention',
-      cert3_desc: 'High-end diamond polishing seals microscopic stone open-pores, preventing vegetative growth.',
-      cert4_title: 'Immortal Color Hue',
-      cert4_desc: 'Pure, mineral-rich stone that is impervious to UV discoloration and heavy industrial smoke.',
-      comp_title: 'Why MB Stounas Quality Outperforms the Rest?',
-      comp_us: 'MB STOUNAS STANDARDS',
-      comp_others: 'CHEAP COUNTERPARTS',
-      us_list: [
-        '100% Genuine Nordic premium natural granite blocks.',
-        'Extremity reinforced concrete grids to ensure vertical stability.',
-        'Mechanical CNC deep milling for permanent font carving.',
-        'Faceted diamond-cut weather-tight joints preventing moisture leaks.'
-      ],
-      others_list: [
-        'Synthetic composite powder materials prone to splitting.',
-        'Thin non-reinforced mortar blocks shifting after one season.',
-        'Shallow surface ink sprays wearing off from heavy rain.',
-        'Poor silicon sealing joints disintegrating from sub-zero frost.'
-      ]
-    },
-    RU: {
-      headline: 'ГАРАНТИЯ ВЫСШИХ СТАНДАРТОВ КАЧЕСТВА',
-      title: 'Мы не просто говорим о качестве — мы сертифицируем его',
-      sub: 'Памятник на могиле устанавливается на десятилетия. Поэтому на каждое изделие мы предоставляем паспорт качества и используем только сертифицированный натуральный гранит.',
-      cert1_title: 'Сертифицированное происхождение',
-      cert1_desc: 'Все материалы поставляются непосредственно из лучших европейских карьеров Скандинавии.',
-      cert2_title: 'Сверхвысокая морозостойкость',
-      cert2_desc: 'Тестирование камня на 50 суровых циклов замерзания в условиях северного климата.',
-      cert3_title: 'Защита от мха и плесени',
-      cert3_desc: 'Алмазная полировка до зеркального блеска запечатывает поры акрила.',
-      cert4_title: 'Пожизненный цвет',
-      cert4_desc: 'Природный гранит, не выгорающий под солнцем и устойчивый к агрессивной городской среде.',
-      comp_title: 'В чем превосходство качества MB Stounas?',
-      comp_us: 'СТАНДАРТЫ MB STOUNAS',
-      comp_others: 'ДЁШЕВЫЕ ИМИТАЦИИ',
-      us_list: [
-        '100% натуральный скандинавский гранит.',
-        'Монолитный армированный фундамент с запасом прочности.',
-        'Глубокая механическая гравировка букв на станках с ЧПУ.',
-        'Шовная мастика премиум-класса против влажности.'
-      ],
-      others_list: [
-        'Китайский дешевый композит из прессованной крошки.',
-        'Плоский тонкий слой застывшего цемента без арматуры.',
-        'Поверхностное дешевое напыление краски, смывающееся за сезон.',
-        'Обычный силикон, разрушающийся при первых морозах.'
-      ]
-    }
-  }[currentLang];
+  const t = qualityTranslations[currentLang];
 
   return (
     <section id="kokybe" className="py-24 bg-neutral-950 text-white relative">

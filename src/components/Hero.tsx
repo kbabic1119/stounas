@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowRight, Mountain, ShieldCheck, Handshake, Layers, Target, Truck, MapPin, X } from 'lucide-react';
 import backgroundImage from './bg_compressed.jpg';
-import polishedBlackGranite from './polished_black_granite.png';
-import speckledGrayGranite from './speckled_gray_granite.png';
-import auroraRedGranite from './aurora_red_granite.png';
 import Logo from './Logo';
+import { heroTranslations, heroModalTranslations, graniteSpecimens as baseSpecimens } from '../data/translations';
 
 interface HeroProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -13,142 +11,20 @@ interface HeroProps {
 }
 
 export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: HeroProps) {
-  const t = {
-    LT: {
-      granite: 'GRANITAS.',
-      quality: 'KOKYBĖ. PATIKIMUMAS.',
-      sub: 'Didmeninė granito prekyba ir kapaviečių įrengimai visoje Lietuvoje.',
-      feature1: 'DIDMENINĖ GRANITO PREKYBA',
-      feature2: 'KAPAVIEČIŲ ĮRENGIMAS',
-      feature3: 'AUKŠTA KOKYBĖ',
-      feature4: 'PATIKIMAS PARTNERIS',
-      pill1: 'PLATUS ASORTIMENTAS',
-      pill2: 'TIKSLUMAS IR ATIDUMAS',
-      pill3: 'GREITAS PRISTATYMAS',
-      pill4: 'VISOS LIETUVOS APTYRITIS',
-      cta: 'SUSISIEKITE SU MUMIS',
-    },
-    EN: {
-      granite: 'GRANITE.',
-      quality: 'QUALITY. RELIABILITY.',
-      sub: 'Wholesale granite supply and cemetery installation services across Lithuania.',
-      feature1: 'WHOLESALE GRANITE',
-      feature2: 'CEMETERY INSTALLATION',
-      feature3: 'PREMIUM QUALITY',
-      feature4: 'TRUSTED PARTNER',
-      pill1: 'WIDE VARIETY',
-      pill2: 'PRECISION & ATTENTION',
-      pill3: 'FAST DELIVERY',
-      pill4: 'ALL LITHUANIA COVERAGE',
-      cta: 'CONTACT US',
-    },
-    RU: {
-      granite: 'ГРАНИТ.',
-      quality: 'КАЧЕСТВО. НАДЕЖНОСТЬ.',
-      sub: 'Оптовая торговля гранитом и обустройство могил по всей Литве.',
-      feature1: 'ОПТОВАЯ ТОРГОВЛЯ ГРАНИТОМ',
-      feature2: 'ОБУСТРОЙСТВО МОГИЛ',
-      feature3: 'ВЫСОКОЕ КАЧЕСТВО',
-      feature4: 'НАДЕЖНЫЙ ПАРТНЕР',
-      pill1: 'ШИРОКИЙ АССОРТИМЕНТ',
-      pill2: 'ТОЧНОСТЬ И ВНИМАНИЕ',
-      pill3: 'БЫСТРАЯ ДОСТАВКА',
-      pill4: 'ОБСЛУЖИВАНИЕ ПО ВСЕЙ ЛИТВЕ',
-      cta: 'СВЯЗАТЬСЯ С НАМИ',
-    }
-  }[currentLang];
+  const t = heroTranslations[currentLang];
+  const modalT = heroModalTranslations[currentLang];
 
   const [selectedSpecimen, setSelectedSpecimen] = useState<any | null>(null);
 
-  const modalT = {
-    LT: {
-      graniteSpecimen: 'GRANITO PAVYZDYS',
-      origin: 'Kilmė',
-      density: 'Tankis',
-      frost: 'Atsparumas šalčiui',
-      cta: 'Teirautis dėl šio akmens',
-    },
-    EN: {
-      graniteSpecimen: 'GRANITE SPECIMEN',
-      origin: 'Origin',
-      density: 'Density',
-      frost: 'Frost Resistance',
-      cta: 'Inquire About This Stone',
-    },
-    RU: {
-      graniteSpecimen: 'ОБРАЗЕЦ ГРАНИТА',
-      origin: 'Происхождение',
-      density: 'Плотность',
-      frost: 'Морозостойкость',
-      cta: 'Узнать подробнее',
-    }
-  }[currentLang];
-
-  const graniteSpecimens = [
-    {
-      id: 'black',
-      name: {
-        LT: 'Poliruotas juodas granitas',
-        EN: 'Polished Black Granite',
-        RU: 'Полированный черный гранит',
-      }[currentLang],
-      origin: {
-        LT: 'Švedija (Diabazas)',
-        EN: 'Sweden (Diabase)',
-        RU: 'Швеция (Диабаз)',
-      }[currentLang],
-      density: '3050 kg/m³',
-      frostResistance: 'F100 (Aukščiausia klasė)',
-      image: polishedBlackGranite,
-      desc: {
-        LT: 'Aukščiausios klasės giliai juodas akmuo su smulkia mineraline struktūra. Ypač populiarus prabangiems paminklams, graviravimui ir dengiamosioms plokštėms.',
-        EN: 'Premium-grade deep black stone with a fine mineral structure. Highly popular for high-end monuments, laser engraving, and cover slabs.',
-        RU: 'Камень премиум-класса глубокого черного цвета с мелкой минеральной структурой. Очень популярен для элитных памятников, лазерной гравировки и облицовки.',
-      }[currentLang]
-    },
-    {
-      id: 'gray',
-      name: {
-        LT: 'Pilkas taškuotas granitas',
-        EN: 'Speckled Gray Granite',
-        RU: 'Серый пятнистый гранит',
-      }[currentLang],
-      origin: {
-        LT: 'Suomija (Kuru)',
-        EN: 'Finland (Kuru)',
-        RU: 'Финляндия (Куру)',
-      }[currentLang],
-      density: '2680 kg/m³',
-      frostResistance: 'F100 (Aukšta)',
-      image: speckledGrayGranite,
-      desc: {
-        LT: 'Klasikinis šiaurietiškas šviesiai pilkas granitas su tamsiais mineralų intarpais. Pasižymi ypatingu atsparumu atmosferos poveikiui, puikiai tinka pamatų apdailai.',
-        EN: 'Classic Nordic light gray granite with dark mineral inclusions. Excellent weather resistance, perfect for foundation coverings and borders.',
-        RU: 'Классический скандинавский светло-серый гранит с темными вкраплениями. Обладает высокой устойчивостью к атмосферным воздействиям.',
-      }[currentLang]
-    },
-    {
-      id: 'aurora',
-      name: {
-        LT: 'Aurora raudonas granitas',
-        EN: 'Aurora Red Granite',
-        RU: 'Аврора красный гранит',
-      }[currentLang],
-      origin: {
-        LT: 'Suomija / Norvegija',
-        EN: 'Finland / Norway',
-        RU: 'Финляндия / Норвегия',
-      }[currentLang],
-      density: '2720 kg/m³',
-      frostResistance: 'F100 (Aukšta)',
-      image: auroraRedGranite,
-      desc: {
-        LT: 'Išskirtinis raudonai rudas banguotas granitas su juodomis mineralų venomis. Kiekviena plokštė turi unikalų, nepakartojamą gamtos raštą.',
-        EN: 'Unique red-brown wavy granite with black mineral veins. Every slab has a unique, non-repetitive natural pattern.',
-        RU: 'Уникальный красно-коричневый волнистый гранит с черными прожилками. Каждая плита имеет неповторимый природный рисунок.',
-      }[currentLang]
-    }
-  ];
+  const graniteSpecimens = baseSpecimens.map(spec => ({
+    id: spec.id,
+    name: spec.name[currentLang],
+    origin: spec.origin[currentLang],
+    density: spec.density,
+    frostResistance: spec.frostResistance[currentLang],
+    image: spec.image,
+    desc: spec.desc[currentLang],
+  }));
 
   const handleSpecimenClick = (id: string) => {
     const spec = graniteSpecimens.find(s => s.id === id);
@@ -356,7 +232,7 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                     className="relative w-[32%] h-[65%] bg-neutral-900 border-l border-t border-zinc-700/60 rounded-t-lg shadow-2xl flex flex-col justify-end overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300 group/slab cursor-pointer"
                   >
                     <img 
-                      src={polishedBlackGranite} 
+                      src={graniteSpecimens.find(s => s.id === 'black')?.image} 
                       alt="Polished black granite"
                       className="absolute inset-0 w-full h-full object-cover group-hover/slab:scale-110 transition-transform duration-700"
                       referrerPolicy="no-referrer"
@@ -374,7 +250,7 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                     className="relative w-[36%] h-[78%] bg-zinc-800 border-l border-t border-zinc-600/60 rounded-t-xl shadow-2xl flex flex-col justify-between overflow-hidden transform -translate-y-2 hover:-translate-y-4 transition-transform duration-300 group/slab-main cursor-pointer"
                   >
                     <img 
-                      src={speckledGrayGranite} 
+                      src={graniteSpecimens.find(s => s.id === 'gray')?.image} 
                       alt="Speckled gray granite"
                       className="absolute inset-0 w-full h-full object-cover group-hover/slab-main:scale-110 transition-transform duration-700"
                       referrerPolicy="no-referrer"
@@ -395,7 +271,7 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                     className="relative w-[28%] h-[60%] bg-zinc-900 border-r border-t border-zinc-700/60 rounded-tr-3xl rounded-tl-sm shadow-2xl flex flex-col justify-end overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300 group/slab-dark cursor-pointer"
                   >
                     <img 
-                      src={auroraRedGranite} 
+                      src={graniteSpecimens.find(s => s.id === 'aurora')?.image} 
                       alt="Dark charcoal granite"
                       className="absolute inset-0 w-full h-full object-cover group-hover/slab-dark:scale-110 transition-transform duration-700"
                       referrerPolicy="no-referrer"
