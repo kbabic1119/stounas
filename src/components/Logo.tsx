@@ -7,105 +7,93 @@ interface LogoProps {
 export default function Logo({ className = "w-12 h-12" }: LogoProps) {
   return (
     <div className={`relative ${className} flex-shrink-0 select-none`}>
-      <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-        {/* Outer Solid dark Hexagon Base to stand out on dark backgrounds */}
+      <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+        <defs>
+          {/* Gradients for polished stone faces */}
+          <linearGradient id="greenTop" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#a3e635" />
+            <stop offset="100%" stopColor="#70b324" />
+          </linearGradient>
+          
+          <linearGradient id="greyLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f4f4f5" />
+            <stop offset="100%" stopColor="#a1a1aa" />
+          </linearGradient>
+
+          <linearGradient id="blackRight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#3f3f46" />
+            <stop offset="100%" stopColor="#18181b" />
+          </linearGradient>
+
+          <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#70b324" stopOpacity="0.8" />
+            <stop offset="50%" stopColor="#ffffff" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#18181b" stopOpacity="0.9" />
+          </linearGradient>
+        </defs>
+
+        {/* Outer Premium Hexagon Frame */}
         <polygon 
-          points="50,2 93,27 93,73 50,98 7,73 7,27" 
-          fill="#17181c"
+          points="50,4 90,27 90,73 50,96 10,73 10,27" 
+          fill="#111315"
+          stroke="url(#borderGrad)"
+          strokeWidth="3.5"
+          strokeLinejoin="round"
         />
 
-        {/* Double layered sharp borders like in the image */}
-        {/* Outer thick hexagon line */}
+        {/* Inner thin highlight border */}
         <polygon 
-          points="50,4 91,28 91,72 50,96 9,72 9,28" 
-          fill="none" 
-          stroke="#1e2229" 
-          strokeWidth="4" 
-        />
-        
-        {/* Inner thin gap line */}
-        <polygon 
-          points="50,7 88,29 88,71 50,93 12,71 12,29" 
-          fill="#f4f4f5" 
-          stroke="none"
-        />
-        
-        {/* Inner dark frame */}
-        <polygon 
-          points="50,11 83,30 83,70 50,89 17,70 17,30" 
-          fill="#ffffff" 
-          stroke="#1e2229" 
-          strokeWidth="3.5" 
+          points="50,9 86,30 86,70 50,91 14,70 14,30" 
+          fill="none"
+          stroke="#ffffff"
+          strokeWidth="1"
+          opacity="0.05"
         />
 
-        {/* 3D Isometric granite blocks layout */}
-        {/* BLOCK 1: Top-Right GREEN Granite Block */}
-        {/* Top face */}
-        <polygon 
-          points="50,28 69,17 80,24 61,35" 
-          fill="#65a30d" 
-        />
-        {/* Front-Left face */}
-        <polygon 
-          points="50,28 61,35 61,48 50,41" 
-          fill="#3f6212" 
-        />
-        {/* Front-Right face */}
-        <polygon 
-          points="61,35 80,24 80,37 61,48" 
-          fill="#4d7c0f" 
-        />
+        {/* 3D Geometric Granite Block Monogram/Composition */}
+        {/* Combining facets to represent abstract polished stone monuments */}
+        <g transform="translate(0, 2)">
+          {/* Top Face (Lime Green) */}
+          <polygon 
+            points="50,22 74,35 50,49 26,35" 
+            fill="url(#greenTop)" 
+          />
+          
+          {/* Left Face (Speckled Silver Grey) */}
+          <polygon 
+            points="26,35 50,49 50,77 26,63" 
+            fill="url(#greyLeft)" 
+          />
+          
+          {/* Right Face (Obsidian Charcoal Black) */}
+          <polygon 
+            points="50,49 74,35 74,63 50,77" 
+            fill="url(#blackRight)" 
+          />
 
-        {/* BLOCK 2: Center LIGHT GREY Granite slab */}
-        {/* Top face */}
-        <polygon 
-          points="39,36 67,20 74,24 46,40" 
-          fill="#e4e4e7" 
-        />
-        {/* Front-Left face */}
-        <polygon 
-          points="39,36 46,40 46,54 39,50" 
-          fill="#a1a1aa" 
-        />
-        {/* Front-Right face */}
-        <polygon 
-          points="46,40 74,24 74,38 46,54" 
-          fill="#cbd5e1" 
-        />
-
-        {/* BLOCK 3: Lower-Left DARK GREY/CHARCOAL slab */}
-        {/* Top face */}
-        <polygon 
-          points="32,46 59,30 66,34 39,50" 
-          fill="#52525b" 
-        />
-        {/* Front-Left face */}
-        <polygon 
-          points="32,46 39,50 39,64 32,60" 
-          fill="#27272a" 
-        />
-        {/* Front-Right face */}
-        <polygon 
-          points="39,50 66,34 66,48 39,64" 
-          fill="#3f3f46" 
-        />
-
-        {/* BLOCK 4: Bottom DARK BASALT step base */}
-        {/* Top face */}
-        <polygon 
-          points="32,60 59,44 66,48 39,64" 
-          fill="#3f3f46" 
-        />
-        {/* Front-Left face */}
-        <polygon 
-          points="32,60 39,64 39,78 32,74" 
-          fill="#18181b" 
-        />
-        {/* Front-Right face */}
-        <polygon 
-          points="39,64 66,48 66,62 39,78" 
-          fill="#27272a" 
-        />
+          {/* Accent Line highlighting the central intersection */}
+          <line 
+            x1="50" y1="49" x2="50" y2="77" 
+            stroke="#ffffff" 
+            strokeWidth="1.5" 
+            opacity="0.3" 
+            strokeLinecap="round"
+          />
+          <line 
+            x1="26" y1="35" x2="50" y2="49" 
+            stroke="#ffffff" 
+            strokeWidth="1" 
+            opacity="0.2" 
+            strokeLinecap="round"
+          />
+          <line 
+            x1="74" y1="35" x2="50" y2="49" 
+            stroke="#111315" 
+            strokeWidth="1" 
+            opacity="0.4" 
+            strokeLinecap="round"
+          />
+        </g>
       </svg>
     </div>
   );

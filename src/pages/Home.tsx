@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -9,6 +10,8 @@ interface HomeProps {
 }
 
 export default function Home({ currentLang }: HomeProps) {
+  const [prefilledNotes, setPrefilledNotes] = useState('');
+
   return (
     <>
       <Hero 
@@ -17,11 +20,14 @@ export default function Home({ currentLang }: HomeProps) {
           const el = document.getElementById('kontaktai');
           if (el) el.scrollIntoView({ behavior: 'smooth' });
         }} 
+        onSelectSpecimen={(text) => {
+          setPrefilledNotes(text);
+        }}
       />
       <About currentLang={currentLang} />
       <Services currentLang={currentLang} />
       <Quality currentLang={currentLang} />
-      <Contact currentLang={currentLang} prefilledNotes="" />
+      <Contact currentLang={currentLang} prefilledNotes={prefilledNotes} />
     </>
   );
 }

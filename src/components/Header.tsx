@@ -106,8 +106,25 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
             ))}
           </nav>
 
-          {/* Right utility items: Phone Call */}
-          <div className="hidden md:flex items-center">
+          {/* Right utility items: Language switcher and Phone Call */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Language Switcher Row */}
+            <div className="flex items-center space-x-2 bg-brand-dark-lighter border border-white/5 px-2.5 py-1.5 rounded-full text-xs font-bold font-mono">
+              {(['LT', 'EN', 'RU'] as const).map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => setLang(lang)}
+                  className={`px-1.5 py-0.5 rounded transition-colors cursor-pointer ${
+                    currentLang === lang
+                      ? 'text-brand-primary'
+                      : 'text-zinc-400 hover:text-white'
+                  }`}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+
             {/* Premium CTA Phone Button */}
             <a 
               href="tel:+37060000000" 
@@ -151,7 +168,24 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
             </Link>
           ))}
           
-          <div className="pt-4 px-4 border-t border-white/5 flex flex-col space-y-3">
+          <div className="pt-4 px-4 border-t border-white/5 flex flex-col space-y-4">
+            {/* Language Switcher Mobile Row */}
+            <div className="flex justify-center space-x-3 py-1 bg-brand-dark-lighter border border-white/5 rounded-xl">
+              {(['LT', 'EN', 'RU'] as const).map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => setLang(lang)}
+                  className={`px-4 py-2 rounded-lg font-mono text-xs font-black tracking-wider uppercase transition-all duration-200 cursor-pointer ${
+                    currentLang === lang
+                      ? 'bg-brand-primary text-brand-dark shadow-sm'
+                      : 'text-zinc-400 hover:text-white'
+                  }`}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+
             <a 
               href="tel:+37060000000" 
               className="flex items-center justify-center space-x-2 w-full bg-brand-primary text-brand-dark font-black py-3 rounded-xl tracking-wider uppercase text-sm shadow-md"
