@@ -178,7 +178,7 @@ export const aboutTranslations = {
     headline: 'APIE MB STOUNAS',
     title: 'Aukščiausios kokybės granitas ir profesionalus meistriškumas',
     p1: 'MB „Stounas“ yra patikimas Jūsų partneris didmeninėje granito prekyboje ir kapaviečių projektavimo bei įrengimo paslaugose visoje Lietuvoje. Sukaupę didžiulę patirtį, deriname modernią akmens apdirbimo technologiją su autentišku meistriškumu.',
-    p2: 'Tiesiogiai iš didžiausių Švedijos, Suomijos bei Norvegijos karjerų importuojame aukščiausios klasės akmenį. Mūsų misija – įamžinti atminimą ilgaamžiais gaminiais, kurie atlaiko laiko išbandymus ir atšiaurias klimato sąlygas.',
+    p2: 'Tiesiogiai iš didžiausių Indijos karjerų importuojame aukščiausios klasės akmenį. Mūsų misija – įamžinti atminimą ilgaamžiais gaminiais, kurie atlaiko laiko išbandymus ir atšiaurias klimato sąlygas.',
     stat1_num: '15+',
     stat1_txt: 'Metų patirtis',
     stat2_num: '1200+',
@@ -188,9 +188,9 @@ export const aboutTranslations = {
     stat4_num: '24/7',
     stat4_txt: 'Profesionali pagalba',
     val1_title: 'Ilgaamžis patvarumas',
-    val1_desc: 'Naudojame tik geriausią natūralų šiaurietišką granitą, žinomą savo tankumu ir atsparumu temperatūrų svyravimams.',
-    val2_title: 'Tiksli gamyba',
-    val2_desc: 'Mūsų gamyboje atliekami kompiuteriniai akmens pjovimai bei gręžimai, užtikrinantys milimetrų tikslumą montuotojams.',
+    val1_desc: 'Naudojame tik aukštos kokybės natūralų granitą, vertinamą dėl savo tvirtumo, atsparumo aplinkos poveikiui ir ilgaamžiškumo.',
+    val2_title: 'Kruopštus apdirbimas',
+    val2_desc: 'Kiekvienas gaminys ruošiamas atsakingai ir preciziškai, užtikrinant kokybę bei estetišką galutinį rezultatą.',
     val3_title: 'Sklandus montavimas',
     val3_desc: 'Ruošiame armuotus betoninius pamatus, apsaugančius paminklus nuo nusėdimo, pakrypimo ar įtrūkimų bėgant metams.',
   },
@@ -198,7 +198,7 @@ export const aboutTranslations = {
     headline: 'ABOUT MB STOUNAS',
     title: 'Premium Quality Granite and Professional Craftsmanship',
     p1: 'MB "Stounas" is your reliable partner in wholesale granite sales, grave design, and installation services throughout Lithuania. With years of experience, we combine state-of-the-art stone processing technologies with authentic stone masonry.',
-    p2: 'We import top-grade blocks directly from Swedish, Finnish, and Norwegian quarries. Our mission is to preserve memories through durable products that withstand seasonal extremes and the test of time.',
+    p2: 'We import top-grade blocks directly from Indian quarries. Our mission is to preserve memories through durable products that withstand seasonal extremes and the test of time.',
     stat1_num: '15+',
     stat1_txt: 'Years of Experience',
     stat2_num: '1200+',
@@ -207,10 +207,10 @@ export const aboutTranslations = {
     stat3_txt: 'Quality Warranty',
     stat4_num: '24/7',
     stat4_txt: 'Professional Support',
-    val1_title: 'Everlasting Durability',
-    val1_desc: 'We use only top-grade Nordic granite, highly praised for its ultimate density and frost resistance.',
-    val2_title: 'Precision Manufacturing',
-    val2_desc: 'Computerized stone cutting and polishing ensure millimeter precision for flawless field installation.',
+    val1_title: 'Long-term durability',
+    val1_desc: 'We use only high-quality natural granite, valued for its strength, environmental resistance, and longevity.',
+    val2_title: 'Meticulous workmanship',
+    val2_desc: 'Each product is prepared responsibly and precisely, ensuring quality and an aesthetic final result.',
     val3_title: 'Reinforced Foundations',
     val3_desc: 'We construct thick, reinforced concrete basements preventing tombstone sinking or ground shifting over decades.',
   },
@@ -218,7 +218,7 @@ export const aboutTranslations = {
     headline: 'О MB STOUNAS',
     title: 'Высококачественный гранит и профессиональное мастерство',
     p1: 'MB "Stounas" — ваш надежный партнер в сфере оптовой продажи гранита, индивидуального проектирования и благоустройства могил по всей Литве. Мы совмещаем современные технологии и традиционное мастерство.',
-    p2: 'Мы поставляем гранитные блоки напрямую из крупнейших карьеров Швеции, Финляндии и Норвегии. Наша цель — увековечить память усопших надежными изделиями, выдерживающими любые климатические условия.',
+    p2: 'Мы поставляем гранитные блоки напрямую из крупнейших карьеров Индии. Наша цель — увековечить память усопших надежными изделиями, выдерживающими любые климатические условия.',
     stat1_num: '15+',
     stat1_txt: 'Лет Опыта',
     stat2_num: '1200+',
@@ -227,10 +227,10 @@ export const aboutTranslations = {
     stat3_txt: 'Гарантия Качества',
     stat4_num: '24/7',
     stat4_txt: 'Персональная помощь',
-    val1_title: 'Вечная прочность',
-    val1_desc: 'Мы используем только сертифицированный скандинавский гранит высокой плотности.',
-    val2_title: 'Точное производство',
-    val2_desc: 'Компьютерная резка и обработка камня гарантируют идеальную точность сборки.',
+    val1_title: 'Долговечность',
+    val1_desc: 'Мы используем только высококачественный натуральный гранит, ценящийся за свою прочность, устойчивость к воздействию окружающей среды и долговечность.',
+    val2_title: 'Тщательная обработка',
+    val2_desc: 'Каждое изделие подготавливается ответственно и с высокой точностью, обеспечивая качество и эстетичный результат.',
     val3_title: 'Усиленный фундамент',
     val3_desc: 'Создаем прочные армированные фундаменты, предотвращающие крен и усадку памятника со временем.',
   }
@@ -240,8 +240,9 @@ export const servicesTranslations = {
   LT: {
     headline: 'PASLAUGOS IR DARBŲ EIGA',
     title: 'Profesionalūs kapaviečių sprendimai nuo A iki Z',
-    serv1_title: 'Didmeninis tiekimas',
-    serv1_desc: 'Tiekiame granito blokus, pusgaminius, monumentus bei dengiamąsias plokštes akmens apdirbimo dirbtuvėms bei paminklų salonams visoje Lietuvoje palankiomis sąlygomis.',
+    detailed_title: 'MŪSŲ TEIKIAMOS PASLAUGOS',
+    serv1_title: 'Didmeninis/Mažmeninis Tiekimas',
+    serv1_desc: 'Tiekiame aukštos kokybės granito plokštes akmens apdirbimo dirbtuvėms, paminklų salonams bei privatiems klientams visoje Lietuvoje palankiomis sąlygomis.',
     serv2_title: 'Kapaviečių įrengimas',
     serv2_desc: 'Pilnas kapo sutvarkymas: pamatų liejimas, paminklų montavimas, skaldos užpylimas arba uždengimas plokštėmis, apželdinimas bei priežiūra.',
     serv3_title: '3D vizualizacijos',
@@ -251,8 +252,8 @@ export const servicesTranslations = {
     step_title: 'MŪSŲ DARBŲ PROCESAS',
     step1_name: 'Nemokama konsultacija',
     step1_desc: 'Išklausome norus, įvertiname kapavietės vietą bei paruošiame preliminarų biudžetą.',
-    step2_name: '3D Projektas & Derinimas',
-    step2_desc: 'Vizualizuojame projektą trimačiame plane, parenkame granito tekstūras bei atspalvius.',
+    step2_name: 'Projektavimas ir Derinimas',
+    step2_desc: 'Susitinkame vietoje, atliekame reikalingus išmatavimus, aptariame kapavietės sprendimus bei padedame parinkti tinkamiausią granito spalvą ir dizainą.',
     step3_name: 'Betonavimas & Pamatas',
     step3_desc: 'Liejame tvirtą armuotą gelžbetonį, atitinkantį visus statybos mechaninius reikalavimus.',
     step4_name: 'Montavimas & Pridavimas',
@@ -261,8 +262,9 @@ export const servicesTranslations = {
   EN: {
     headline: 'SERVICES & WORKFLOW',
     title: 'Professional Grave Setup From Draft to Care',
-    serv1_title: 'Wholesale Sourcing',
-    serv1_desc: 'We supply high-grade granite blocks, semi-finished slabs, monuments, and covering panels to stonemason workshops and retail salons across Lithuania.',
+    detailed_title: 'OUR PROVIDED SERVICES',
+    serv1_title: 'Wholesale & Retail Supply',
+    serv1_desc: 'We supply high-quality granite slabs to stonemason workshops, monument salons, and private clients across Lithuania under favorable conditions.',
     serv2_title: 'Comprehensive Installation',
     serv2_desc: 'Full cemetery arrangement: concrete basements pouring, headstone setups, gravel fillings, top slab coverings, and restoration works.',
     serv3_title: 'Photorealistic 3D Drafts',
@@ -272,8 +274,8 @@ export const servicesTranslations = {
     step_title: 'OUR STREAMLINED PROCESS',
     step1_name: 'Free Consultation',
     step1_desc: 'We carefully discuss your ideas, evaluate site topography, and outline estimated budget ranges.',
-    step2_name: '3D Design & Match',
-    step2_desc: 'We render the draft in a accurate 3D plane, picking granite grades and border styles with you.',
+    step2_name: 'Design & Matching',
+    step2_desc: 'We meet on site, take the necessary measurements, discuss grave solutions, and help you choose the most suitable granite color and design.',
     step3_name: 'Reinforced Concrete Foundation',
     step3_desc: 'We pour steel-mesh reinforced premium concrete to safely anchor heavy granite works.',
     step4_name: 'Flawless Setup',
@@ -282,8 +284,9 @@ export const servicesTranslations = {
   RU: {
     headline: 'УСЛУГИ И ЭТАПЫ РАБОТ',
     title: 'Профессиональные решения для могил от А до Я',
-    serv1_title: 'Оптовые поставки',
-    serv1_desc: 'Поставка гранитных блоков, заготовок, готовых памятников и плит для камнерезных цехов и ритуальных салонов Литвы.',
+    detailed_title: 'ПРЕДОСТАВЛЯЕМЫЕ УСЛУГИ',
+    serv1_title: 'Оптовые и розничные поставки',
+    serv1_desc: 'Мы поставляем высококачественные гранитные плиты камнеобрабатывающим мастерским, салонам памятников и частным клиентам по всей Литве на выгодных условиях.',
     serv2_title: 'Обустройство под ключ',
     serv2_desc: 'Весь комплекс работ: заливка фундаментов, установка памятников, засыпка щебнем, укладка гранитных плит, озеленение.',
     serv3_title: '3D Визуализация',
@@ -293,8 +296,8 @@ export const servicesTranslations = {
     step_title: 'НАШ РАБОЧИЙ ПРОЦЕСС',
     step1_name: 'Бесплатная Консультация',
     step1_desc: 'Согласуем пожелания, оцениваем рельеф участка и подбираем ценовой диапазон.',
-    step2_name: '3D Дизайн-Проект',
-    step2_desc: 'Создаем эскиз с выбранным гранитом и декоративными элементами.',
+    step2_name: 'Проектирование и согласование',
+    step2_desc: 'Встречаемся на месте, проводим необходимые замеры, обсуждаем варианты благоустройства и помогаем выбрать наиболее подходящий цвет и дизайн гранита.',
     step3_name: 'Заливка фундамента',
     step3_desc: 'Заливаем надежный армированный бетонный цоколь с гидроизоляцией.',
     step4_name: 'Монтаж и Сдача',
@@ -305,86 +308,95 @@ export const servicesTranslations = {
 export const qualityTranslations = {
   LT: {
     headline: 'AUKŠČIAUSIŲ KOKYBĖS STANDARTŲ GARANTIJA',
-    title: 'Apie akmens kokybę mes nekalbame – mes ją sertifikuojame',
+    title: 'Apie akmens kokybę mes nekalbame – mes ją suteikiame',
     sub: 'Paminklas kapavietėje statomas dešimtmečiams. Todėl kiekvienam užsakymui priskiriame unikalų gamybos pasą ir naudojame tik sertifikuotą natūralų granitą.',
-    cert1_title: 'Sertifikuota kilmė',
-    cert1_desc: 'Visi mūsų blokai turi saugios kilmės deklaraciją iš didžiausių Skandinavijos karjerų.',
+    cert1_title: 'AUKŠTA KOKYBĖ',
+    cert1_desc: 'Naudojame kruopščiai atrinktą natūralų Indišką granitą, pasižymintį ilgaamžiškumu ir atsparumu aplinkos poveikiui.',
     cert2_title: 'Maksimalus atsparumas atšilimui',
     cert2_desc: 'Granitas tirtas dėl 50 šaldymo-atšildymo ciklų pavojaus Šiaurės Europos sąlygomis.',
     cert3_title: 'Atsparumas samanoms ir pelėsiams',
     cert3_desc: 'Itin kruopštus deimantinis poliravimas užpildo mikroporas, kad neaugtų joks aplinkos grybelis.',
     cert4_title: 'Amžina atspalvio garantija',
     cert4_desc: 'Taurusis natūralus akmuo, kuris neblunka tiesioginėje saulėje ir nekeičia atspalvio nuo pramoninio smogo.',
-    comp_title: 'Kodėl MB Stounas kokybė yra pranašesnė?',
-    comp_us: 'MB STOUNAS STANDARTAS',
-    comp_others: 'PIGIOS IMITACIJOS ATVEJAI',
+    comp_title: 'Mūsų vertybės ir standartai',
+    comp_us: 'Kodėl renkasi MB Stounas',
+    comp_others: 'Mūsų prioritetai',
     us_list: [
-      'Tikras Švediškas, Suomiškas, Norvegiškas natūralus akmuo.',
-      'Sustiprinto liejimo pamatas su armatūros tinklais.',
-      'Raidžių graviravimas atliekamas giliuoju, ilgaamžiu mechaniniu frezavimu.',
-      'Profiliuotas sandarinimas deimantinėmis sandarinimo juostomis.'
+      'Ilgaamžės granito medžiagos',
+      'Kokybiškas montavimas pagal Lietuvos klimatą',
+      'Patyrę meistrai ir kruopštus apdirbimas',
+      'Konsultacija bei matavimai vietoje',
+      'Individualus dizaino pritaikymas',
+      'Atsakingas požiūris į kiekvieną projektą'
     ],
     others_list: [
-      'Presuoto akmens dulkės, pigus dirbtinis kompozitas iš trečiųjų šalių.',
-      'Plonas, nearmuotas cementas, kuris sutrūkinėja per pirmąją žiemą.',
-      'Paviršinis, nekokybiškas graviravimas, kuris nusidėvi po kelerių metų.',
-      'Paprastas silikonas arba prastos kokybės klijai, pagelstantys ir subyrantys.'
+      'Kokybiškos medžiagos',
+      'Tvirti montavimo sprendimai',
+      'Ilgaamžis rezultatas',
+      'Estetika ir tvarka',
+      'Patikimas aptarnavimas'
     ]
   },
   EN: {
     headline: 'SUPREME QUALITY STANDARDS WARRANTY',
-    title: 'We Do Not Just Talk Quality – We Certify It',
+    title: 'We Do Not Just Talk Quality – We Provide It',
     sub: 'Cemetery monuments are built to last generations. Therefore we assign a unique manufacturing passport and use only certified, pure natural granite.',
-    cert1_title: 'Certified Origin',
-    cert1_desc: 'All blocks contain a documented geo-origin passport from Europe\'s leading quarries.',
+    cert1_title: 'PREMIUM QUALITY',
+    cert1_desc: 'We use carefully selected natural Indian granite, characterized by durability and resistance to environmental impact.',
     cert2_title: 'Ultimate Frost Protection',
     cert2_desc: 'Granite is stress-tested against 50 thermal expansion freeze cycles under Arctic conditions.',
     cert3_title: 'Moss & Algae Prevention',
     cert3_desc: 'High-end diamond polishing seals microscopic stone open-pores, preventing vegetative growth.',
     cert4_title: 'Immortal Color Hue',
     cert4_desc: 'Pure, mineral-rich stone that is impervious to UV discoloration and heavy industrial smoke.',
-    comp_title: 'Why MB Stounas Quality Outperforms the Rest?',
-    comp_us: 'MB STOUNAS STANDARDS',
-    comp_others: 'CHEAP COUNTERPARTS',
+    comp_title: 'Our Values & Standards',
+    comp_us: 'Why Choose MB Stounas',
+    comp_others: 'Our Priorities',
     us_list: [
-      '100% Genuine Nordic premium natural granite blocks.',
-      'Extremity reinforced concrete grids to ensure vertical stability.',
-      'Mechanical CNC deep milling for permanent font carving.',
-      'Faceted diamond-cut weather-tight joints preventing moisture leaks.'
+      'Durable granite materials',
+      'Quality installation tailored to the Lithuanian climate',
+      'Experienced craftsmen and meticulous processing',
+      'On-site consultation and measurements',
+      'Custom design adaptation',
+      'Responsible approach to every project'
     ],
     others_list: [
-      'Synthetic composite powder materials prone to splitting.',
-      'Thin non-reinforced mortar blocks shifting after one season.',
-      'Shallow surface ink sprays wearing off from heavy rain.',
-      'Poor silicon sealing joints disintegrating from sub-zero frost.'
+      'Quality materials',
+      'Robust installation solutions',
+      'Long-lasting results',
+      'Aesthetics and neatness',
+      'Reliable service'
     ]
   },
   RU: {
-    headline: 'ГАРАНТИЯ ВЫСШИХ СТАНДАРТОВ КАЧЕСТВА',
-    title: 'Мы не просто говорим о качестве — мы сертифицируем его',
+    headline: 'ГАРАНТИЯ ВЫСШИХ СТАНДАНТОВ КАЧЕСТВА',
+    title: 'О качестве камня мы не говорим – мы его предоставляем',
     sub: 'Памятник на могиле устанавливается на десятилетия. Поэтому на каждое изделие мы предоставляем паспорт качества и используем только сертифицированный натуральный гранит.',
-    cert1_title: 'Сертифицированное происхождение',
-    cert1_desc: 'Все материалы поставляются непосредственно из лучших европейских карьеров Скандинавии.',
+    cert1_title: 'ВЫСОКОЕ КАЧЕСТВО',
+    cert1_desc: 'Мы используем тщательно отобранный натуральный индийский гранит, отличающийся долговечностью и устойчивостью к воздействию окружающей среды.',
     cert2_title: 'Сверхвысокая морозостойкость',
     cert2_desc: 'Тестирование камня на 50 суровых циклов замерзания в условиях северного климата.',
     cert3_title: 'Защита от мха и плесени',
     cert3_desc: 'Алмазная полировка до зеркального блеска запечатывает поры акрила.',
     cert4_title: 'Пожизненный цвет',
     cert4_desc: 'Природный гранит, не выгорающий под солнцем и устойчивый к агрессивной городской среде.',
-    comp_title: 'В чем превосходство качества MB Stounas?',
-    comp_us: 'СТАНДАРТЫ MB STOUNAS',
-    comp_others: 'ДЁШЕВЫЕ ИМИТАЦИИ',
+    comp_title: 'Наши ценности и стандарты',
+    comp_us: 'Почему выбирают MB Stounas',
+    comp_others: 'Наши приоритеты',
     us_list: [
-      '100% натуральный скандинавский гранит.',
-      'Монолитный армированный фундамент с запасом прочности.',
-      'Глубокая механическая гравировка букв на станках с ЧПУ.',
-      'Шовная мастика премиум-класса против влажности.'
+      'Долговечные гранитные материалы',
+      'Качественный монтаж с учетом литовского климата',
+      'Опытные мастера и тщательная обработка',
+      'Консультация и замеры на месте',
+      'Индивидуальная адаптация дизайна',
+      'Ответственный подход к каждому проекту'
     ],
     others_list: [
-      'Китайский дешевый композит из прессованной крошки.',
-      'Плоский тонкий слой застывшего цемента без арматуры.',
-      'Поверхностное дешевое напыление краски, смывающееся за сезон.',
-      'Обычный силикон, разрушающийся при первых морозах.'
+      'Качественные материалы',
+      'Прочные монтажные решения',
+      'Долговечный результат',
+      'Эстетика и порядок',
+      'Надежное обслуживание'
     ]
   }
 };
@@ -508,4 +520,77 @@ export const footerTranslations = {
     rights: 'Все права защищены. Любое копирование материалов преследуется по закону Литовской Республики.',
   }
 };
+
+export const detailedServicesList = [
+  {
+    LT: 'Gaminame paminklus',
+    EN: 'Monument Manufacturing',
+    RU: 'Изготовление памятников'
+  },
+  {
+    LT: 'Kapų dengimas plokštėmis',
+    EN: 'Grave Covering with Slabs',
+    RU: 'Покрытие могил плитами'
+  },
+  {
+    LT: 'Paminklo montavimas',
+    EN: 'Monument Installation',
+    RU: 'Установка памятников'
+  },
+  {
+    LT: 'Plokštės kapams',
+    EN: 'Grave Slabs',
+    RU: 'Плиты для могил'
+  },
+  {
+    LT: 'Kapaviečių įrengimas',
+    EN: 'Cemetery Arrangement',
+    RU: 'Обустройство могил'
+  },
+  {
+    LT: 'Kapų tvorelės',
+    EN: 'Grave Fences',
+    RU: 'Ограды для могил'
+  },
+  {
+    LT: 'Paminklų restauravimas',
+    EN: 'Monument Restoration',
+    RU: 'Реставрация памятников'
+  },
+  {
+    LT: 'Kapų dekoravimas skaldele',
+    EN: 'Grave Decoration with Gravel',
+    RU: 'Декорирование могил щебнем'
+  },
+  {
+    LT: 'Pamatų apdaila',
+    EN: 'Foundation Decoration',
+    RU: 'Отделка фундамента'
+  },
+  {
+    LT: 'Paminklų statymas',
+    EN: 'Monument Erection',
+    RU: 'Монтаж надгробий'
+  },
+  {
+    LT: 'Granitinės plokštės',
+    EN: 'Granite Slabs',
+    RU: 'Гранитные плиты'
+  },
+  {
+    LT: 'Skaldos užpylimas',
+    EN: 'Gravel Filling',
+    RU: 'Засыпка щебнем'
+  },
+  {
+    LT: 'Raidžių kalimas',
+    EN: 'Letter Carving',
+    RU: 'Гравировка букв'
+  },
+  {
+    LT: 'Portretų kalimas',
+    EN: 'Portrait Carving',
+    RU: 'Гравировка портретов'
+  }
+];
 

@@ -96,17 +96,17 @@ export default function Quality({ currentLang }: QualityProps) {
               </ul>
             </div>
 
-            {/* Others column */}
-            <div className="p-8 space-y-6 bg-red-950/[0.04] md:bg-transparent">
-              <div className="flex items-center space-x-3 text-red-500 mb-4">
-                <span className="text-red-500">✕</span>
+            {/* Others column (re-styled to Priorities) */}
+            <div className="p-8 space-y-6 bg-brand-primary/[0.01] md:bg-transparent">
+              <div className="flex items-center space-x-3 text-brand-primary mb-4">
+                <Sparkles size={24} />
                 <span className="font-sans font-black tracking-wider text-sm uppercase">{t.comp_others}</span>
               </div>
               <ul className="space-y-4">
                 {t.others_list.map((item, idx) => (
                   <li key={idx} className="flex items-start">
-                    <span className="text-red-500/60 mr-3 text-sm flex-shrink-0">✕</span>
-                    <span className="text-zinc-500 text-xs sm:text-sm font-medium">{item}</span>
+                    <span className="text-brand-primary/80 mr-3 text-base flex-shrink-0">—</span>
+                    <span className="text-zinc-200 text-xs sm:text-sm font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>

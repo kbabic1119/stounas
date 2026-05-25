@@ -1,6 +1,6 @@
 import React from 'react';
-import { Layers, Construction, FileSpreadsheet, Eye, ClipboardCheck, Ruler } from 'lucide-react';
-import { servicesTranslations } from '../data/translations';
+import { Layers, Construction, Ruler, Check } from 'lucide-react';
+import { servicesTranslations, detailedServicesList } from '../data/translations';
 
 interface ServicesProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -12,7 +12,6 @@ export default function Services({ currentLang }: ServicesProps) {
   const services = [
     { icon: <Layers size={32} />, title: t.serv1_title, desc: t.serv1_desc },
     { icon: <Construction size={32} />, title: t.serv2_title, desc: t.serv2_desc },
-    { icon: <Eye size={32} />, title: t.serv3_title, desc: t.serv3_desc },
     { icon: <Ruler size={32} />, title: t.serv4_title, desc: t.serv4_desc },
   ];
 
@@ -41,7 +40,7 @@ export default function Services({ currentLang }: ServicesProps) {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {services.map((s, i) => (
             <div 
               key={i} 
@@ -64,6 +63,31 @@ export default function Services({ currentLang }: ServicesProps) {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Detailed Services Grid */}
+        <div className="border-t border-white/5 pt-20 mb-20">
+          <div className="text-center mb-12">
+            <span className="text-xs font-mono font-bold tracking-[0.3em] text-brand-primary block uppercase">
+              // {t.detailed_title}
+            </span>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {detailedServicesList.map((item, idx) => (
+              <div 
+                key={idx}
+                className="bg-brand-dark border border-white/5 p-5 rounded-2xl flex items-center space-x-4 hover:border-brand-primary/30 hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(112,179,36,0.03)] transition-all duration-300 group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-brand-dark transition-all duration-300 flex-shrink-0">
+                  <Check size={16} />
+                </div>
+                <span className="text-zinc-200 text-sm font-semibold tracking-wide group-hover:text-white transition-colors">
+                  {item[currentLang]}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Steps Block */}
