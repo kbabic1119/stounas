@@ -481,7 +481,7 @@ export const contactTranslations = {
 
 export const footerTranslations = {
   LT: {
-    desc: 'Sertifikuoto natūralaus skandinaviško granito gamyba, tiesioginis didmeninis tiekimas bei kapaviečių projektavimo-apdailos darbai visoje Lietuvoje.',
+    desc: 'Sertifikuoto natūralaus iš Indijos kalnų importuoto granito gamyba, tiesioginis didmeninis tiekimas bei kapaviečių projektavimo-apdailos darbai visoje Lietuvoje.',
     links_title: 'Meniu Nuorodos',
     home: 'Pradžia',
     about: 'Apie mus',
@@ -494,7 +494,7 @@ export const footerTranslations = {
     rights: 'Visos teisės saugomos. Šis tinklalapis yra apsaugotas Lietuvos Respublikos autorių teisių įstatymo.',
   },
   EN: {
-    desc: 'Manufacturing of certified natural Scandinavian granite, direct wholesale deliveries, and graveyard landscape masonry setups throughout Lithuania.',
+    desc: 'Manufacturing of certified natural granite imported from Indian mountains, direct wholesale deliveries, and graveyard landscape masonry setups throughout Lithuania.',
     links_title: 'Quick Navigation',
     home: 'Home',
     about: 'About Us',
@@ -507,7 +507,7 @@ export const footerTranslations = {
     rights: 'All rights reserved. Replications without legal consent are strictly prohibited by active IP legislation.',
   },
   RU: {
-    desc: 'Производство сертифицированного скандинавского гранита, прямые оптовые поставки и благоустройство могил по всей территории Литвы.',
+    desc: 'Производство сертифицированного натурального гранита, импортируемого из индийских гор, прямые оптовые поставки и благоустройство могил по всей территории Литвы.',
     links_title: 'Карта сайта',
     home: 'Главная',
     about: 'О нас',

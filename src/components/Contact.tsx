@@ -187,7 +187,7 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
           </div>
 
           {/* Right Column - Info panel */}
-          <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
+          <div className="lg:col-span-5 space-y-6">
             
             <div className="bg-brand-dark border border-white/5 rounded-3xl p-8 space-y-6">
               <h3 className="font-display font-extrabold text-xl text-zinc-100 uppercase tracking-wider border-b border-white/5 pb-4">
@@ -237,19 +237,6 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                 </div>
               </div>
 
-            </div>
-
-            {/* Geographical scope pill bar */}
-            <div className="bg-gradient-to-r from-brand-dark to-zinc-900 border border-white/5 rounded-3xl p-8 relative overflow-hidden group hover:border-brand-primary/10 transition-colors">
-              <div className="absolute right-0 top-0 w-24 h-24 bg-brand-primary/5 rounded-full filter blur-xl" />
-              <div className="space-y-2">
-                <h4 className="text-xs font-sans font-black tracking-widest text-brand-primary uppercase">
-                  ✓ {t.map_guide}
-                </h4>
-                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                  {t.map_desc}
-                </p>
-              </div>
             </div>
 
           </div>

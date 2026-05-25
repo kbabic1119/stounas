@@ -200,108 +200,113 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
           </div>
 
           {/* Right Hero Image Column representing the mock image setup exactly */}
-          <div className="lg:col-span-12 xl:col-span-5 relative w-full flex flex-col items-center justify-center min-h-[450px] lg:min-h-[550px] animate-fade-in order-last xl:order-none pt-12 xl:pt-0">
+          <div className="lg:col-span-12 xl:col-span-5 relative w-full flex flex-col items-center justify-center min-h-[450px] lg:min-h-[550px] animate-fade-in order-last xl:order-none">
             
-            {/* Logo on top - Symmetrically on the top edge of the bounding box */}
-            <div className="absolute top-12 xl:top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-              <Logo className="w-16 h-16 filter drop-shadow-[0_4px_12px_rgba(112,179,36,0.3)]" />
-            </div>
-
-            {/* Dark Stone wall textured outline bounding box */}
-            <div className="relative xl:absolute xl:inset-0 w-full h-[400px] xl:h-full border border-white/5 rounded-3xl bg-neutral-900/40 backdrop-blur-sm shadow-inner p-6 flex items-center justify-center overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center grayscale opacity-15"
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800')` }}
-              />
+            {/* Unified wrapper container for both mobile & desktop */}
+            <div className="relative w-full max-w-[450px] h-[400px] mx-auto my-8 xl:my-0">
               
-              {/* Natural forest sky environment layer behind tombstone mockup */}
-              <div className="absolute bottom-0 inset-x-0 h-[65%] bg-gradient-to-t from-emerald-950/20 via-neutral-900/60 to-transparent z-0" />
-              <div className="absolute bottom-4 left-6 right-6 top-8 rounded-2xl overflow-hidden bg-zinc-950/40 border border-zinc-800 flex items-center justify-center">
-                
-                {/* Visual Representation of Cemetery setting (tombstones, gravel garden) */}
-                <div className="absolute inset-0 bg-center bg-cover transition-transform duration-[8s] hover:scale-105" 
-                     style={{ backgroundImage: `url('https://images.unsplash.com/photo-1594498653385-d527250c8fc0?auto=format&fit=crop&q=80&w=800')` }} 
+              {/* Logo on top - Symmetrically on the top edge of the bounding box */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                <Logo className="w-16 h-16 filter drop-shadow-[0_4px_12px_rgba(112,179,36,0.3)]" />
+              </div>
+
+              {/* Dark Stone wall textured outline bounding box */}
+              <div className="w-full h-full border border-white/5 rounded-3xl bg-neutral-900/40 backdrop-blur-sm shadow-inner p-6 flex items-center justify-center overflow-hidden relative">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center grayscale opacity-15"
+                  style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800')` }}
                 />
                 
-                {/* Slabs / Tombstone Showcase Graphic Elements */}
-                <div className="absolute inset-0 flex items-end justify-center p-6 space-x-4 bg-gradient-to-t from-neutral-950 via-transparent to-transparent">
+                {/* Natural forest sky environment layer behind tombstone mockup */}
+                <div className="absolute bottom-0 inset-x-0 h-[65%] bg-gradient-to-t from-emerald-950/20 via-neutral-900/60 to-transparent z-0" />
+                <div className="absolute bottom-4 left-6 right-6 top-8 rounded-2xl overflow-hidden bg-zinc-950/40 border border-zinc-800 flex items-center justify-center">
                   
-                  {/* Polish black granite specimen tombstone (representing the image detail) */}
-                  <div 
-                    onClick={() => handleSpecimenClick('black')}
-                    className="relative w-[32%] h-[65%] bg-neutral-900 border-l border-t border-zinc-700/60 rounded-t-lg shadow-2xl flex flex-col justify-end overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300 group/slab cursor-pointer"
-                  >
-                    <img 
-                      src={graniteSpecimens.find(s => s.id === 'black')?.image} 
-                      alt="Polished black granite"
-                      className="absolute inset-0 w-full h-full object-cover group-hover/slab:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-black via-zinc-900/40 to-zinc-700/10" />
-                    <div className="relative text-center space-y-2 z-10 py-4">
-                      <div className="w-1.5 h-1.5 mx-auto bg-brand-primary rounded-full shadow-[0_0_8px_rgba(112,179,36,0.6)]" />
-                      <div className="text-[7px] font-serif text-white/80 tracking-widest font-bold drop-shadow-md">STEDILIS</div>
+                  {/* Visual Representation of Cemetery setting (tombstones, gravel garden) */}
+                  <div className="absolute inset-0 bg-center bg-cover transition-transform duration-[8s] hover:scale-105" 
+                       style={{ backgroundImage: `url('https://images.unsplash.com/photo-1594498653385-d527250c8fc0?auto=format&fit=crop&q=80&w=800')` }} 
+                  />
+                  
+                  {/* Slabs / Tombstone Showcase Graphic Elements */}
+                  <div className="absolute inset-0 flex items-end justify-center p-6 space-x-4 bg-gradient-to-t from-neutral-950 via-transparent to-transparent">
+                    
+                    {/* Polish black granite specimen tombstone (representing the image detail) */}
+                    <div 
+                      onClick={() => handleSpecimenClick('black')}
+                      className="relative w-[32%] h-[65%] bg-neutral-900 border-l border-t border-zinc-700/60 rounded-t-lg shadow-2xl flex flex-col justify-end overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300 group/slab cursor-pointer"
+                    >
+                      <img 
+                        src={graniteSpecimens.find(s => s.id === 'black')?.image} 
+                        alt="Polished black granite"
+                        className="absolute inset-0 w-full h-full object-cover group-hover/slab:scale-110 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-tr from-black via-zinc-900/40 to-zinc-700/10" />
+                      <div className="relative text-center space-y-2 z-10 py-4">
+                        <div className="w-1.5 h-1.5 mx-auto bg-brand-primary rounded-full shadow-[0_0_8px_rgba(112,179,36,0.6)]" />
+                        <div className="text-[7px] font-serif text-white/80 tracking-widest font-bold drop-shadow-md">STEDILIS</div>
+                      </div>
                     </div>
+
+                    {/* High quality light speckled gray granite specimen */}
+                    <div 
+                      onClick={() => handleSpecimenClick('gray')}
+                      className="relative w-[36%] h-[78%] bg-zinc-800 border-l border-t border-zinc-600/60 rounded-t-xl shadow-2xl flex flex-col justify-between overflow-hidden transform -translate-y-2 hover:-translate-y-4 transition-transform duration-300 group/slab-main cursor-pointer"
+                    >
+                      <img 
+                        src={graniteSpecimens.find(s => s.id === 'gray')?.image} 
+                        alt="Speckled gray granite"
+                        className="absolute inset-0 w-full h-full object-cover group-hover/slab-main:scale-110 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
+                      <div className="relative flex justify-between items-center px-2 z-10 pt-2">
+                        <div className="w-3 h-3 bg-brand-primary rounded-full flex items-center justify-center text-[6px] font-black text-white shadow-lg">★</div>
+                      </div>
+                      <div className="relative text-center py-4 z-10">
+                        <div className="text-[8px] font-sans text-brand-primary tracking-widest font-black uppercase drop-shadow-md">MB STOUNAS</div>
+                        <div className="text-[6px] font-mono text-zinc-300 tracking-wider">PREMIUM CO</div>
+                      </div>
+                    </div>
+
+                    {/* Dark grey wave modern style tombstone */}
+                    <div 
+                      onClick={() => handleSpecimenClick('aurora')}
+                      className="relative w-[28%] h-[60%] bg-zinc-900 border-r border-t border-zinc-700/60 rounded-tr-3xl rounded-tl-sm shadow-2xl flex flex-col justify-end overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300 group/slab-dark cursor-pointer"
+                    >
+                      <img 
+                        src={graniteSpecimens.find(s => s.id === 'aurora')?.image} 
+                        alt="Dark charcoal granite"
+                        className="absolute inset-0 w-full h-full object-cover group-hover/slab-dark:scale-110 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-tl from-neutral-900/90 to-transparent" />
+                      <div className="relative text-center py-2 z-10">
+                        <div className="text-[7px] font-serif text-white/70 tracking-widest font-bold">AURORA</div>
+                      </div>
+                    </div>
+
                   </div>
 
-                  {/* High quality light speckled gray granite specimen */}
-                  <div 
-                    onClick={() => handleSpecimenClick('gray')}
-                    className="relative w-[36%] h-[78%] bg-zinc-800 border-l border-t border-zinc-600/60 rounded-t-xl shadow-2xl flex flex-col justify-between overflow-hidden transform -translate-y-2 hover:-translate-y-4 transition-transform duration-300 group/slab-main cursor-pointer"
-                  >
-                    <img 
-                      src={graniteSpecimens.find(s => s.id === 'gray')?.image} 
-                      alt="Speckled gray granite"
-                      className="absolute inset-0 w-full h-full object-cover group-hover/slab-main:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
-                    <div className="relative flex justify-between items-center px-2 z-10 pt-2">
-                      <div className="w-3 h-3 bg-brand-primary rounded-full flex items-center justify-center text-[6px] font-black text-white shadow-lg">★</div>
-                    </div>
-                    <div className="relative text-center py-4 z-10">
-                      <div className="text-[8px] font-sans text-brand-primary tracking-widest font-black uppercase drop-shadow-md">MB STOUNAS</div>
-                      <div className="text-[6px] font-mono text-zinc-300 tracking-wider">PREMIUM CO</div>
-                    </div>
-                  </div>
-
-                  {/* Dark grey wave modern style tombstone */}
-                  <div 
-                    onClick={() => handleSpecimenClick('aurora')}
-                    className="relative w-[28%] h-[60%] bg-zinc-900 border-r border-t border-zinc-700/60 rounded-tr-3xl rounded-tl-sm shadow-2xl flex flex-col justify-end overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300 group/slab-dark cursor-pointer"
-                  >
-                    <img 
-                      src={graniteSpecimens.find(s => s.id === 'aurora')?.image} 
-                      alt="Dark charcoal granite"
-                      className="absolute inset-0 w-full h-full object-cover group-hover/slab-dark:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-tl from-neutral-900/90 to-transparent" />
-                    <div className="relative text-center py-2 z-10">
-                      <div className="text-[7px] font-serif text-white/70 tracking-widest font-bold">AURORA</div>
-                    </div>
+                  {/* Lit candle box overlay for warmth realism - Positioned top-right */}
+                  <div className="absolute top-4 right-4 z-10 flex items-center space-x-2 bg-black/75 px-3 py-1.5 rounded-full border border-white/10 text-[9px] font-semibold text-zinc-300">
+                    <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping" />
+                    <span className="font-mono text-[9px] text-amber-500">INDIVIDUALŪS UŽSAKYMAI</span>
                   </div>
 
                 </div>
-
-                {/* Lit candle box overlay for warmth realism - Positioned top-right */}
-                <div className="absolute top-4 right-4 z-10 flex items-center space-x-2 bg-black/75 px-3 py-1.5 rounded-full border border-white/10 text-[9px] font-semibold text-zinc-300">
-                  <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping" />
-                  <span className="font-mono text-[9px] text-amber-500">INDIVIDUALŪS UŽSAKYMAI</span>
-                </div>
-
               </div>
-            </div>
 
-            {/* Bottom Green CTA Button floating centered on the bottom edge */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 w-full flex justify-center">
-              <button
-                onClick={onContactClick}
-                className="group flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-dark text-black font-extrabold px-6 py-4.5 rounded-2xl shadow-[0_4px_20px_rgba(112,179,36,0.35)] transition-all duration-300 transform active:scale-95 text-sm uppercase tracking-wider w-full max-w-xs justify-center"
-              >
-                <span>{t.cta}</span>
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1.5" />
-              </button>
+              {/* Bottom Green CTA Button floating centered on the bottom edge */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 w-full flex justify-center">
+                <button
+                  onClick={onContactClick}
+                  className="group flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-dark text-black font-extrabold px-6 py-4.5 rounded-2xl shadow-[0_4px_20px_rgba(112,179,36,0.35)] transition-all duration-300 transform active:scale-95 text-sm uppercase tracking-wider w-full max-w-xs justify-center"
+                >
+                  <span>{t.cta}</span>
+                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1.5" />
+                </button>
+              </div>
+
             </div>
 
           </div>

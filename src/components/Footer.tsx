@@ -29,14 +29,14 @@ export default function Footer({ currentLang }: FooterProps) {
           {/* Logo Brand Box */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <Logo className="w-10 h-10 transition-transform duration-300 group-hover:scale-105" />
+              <Logo className="w-12 h-12 transition-transform duration-300 group-hover:scale-105" />
               <div className="flex flex-col">
-                <div className="flex items-baseline space-x-1 leading-none">
-                  <span className="font-sans font-black text-xl tracking-wider text-white uppercase">MB</span>
-                  <span className="font-sans font-black text-xl tracking-wider text-brand-primary uppercase">STOUNAS</span>
+                <div className="flex items-baseline space-x-1.5 leading-none">
+                  <span className="font-sans font-extrabold text-2xl tracking-wide text-white uppercase">MB</span>
+                  <span className="font-sans font-black text-2xl tracking-wide text-brand-primary uppercase">STOUNAS</span>
                 </div>
-                <div className="text-[7px] font-mono tracking-[0.2em] text-brand-gray mt-0.5 font-bold uppercase">
-                  Granito gamyba
+                <div className="text-[9px] font-mono tracking-[0.25em] mt-1 font-extrabold bg-gradient-to-r from-white to-brand-primary bg-clip-text text-transparent">
+                  — GRANITAS IR PASLAUGOS —
                 </div>
               </div>
             </div>
