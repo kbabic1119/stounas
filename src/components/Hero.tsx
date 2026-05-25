@@ -326,8 +326,8 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
           {/* Right Hero Image Column representing the mock image setup exactly */}
           <div className="lg:col-span-12 xl:col-span-5 relative w-full flex flex-col items-center justify-center min-h-[450px] lg:min-h-[550px] animate-fade-in order-last xl:order-none pt-12 xl:pt-0">
             
-            {/* Logo on top - ONLY for mobile (hidden on xl) */}
-            <div className="xl:hidden flex justify-center mb-6">
+            {/* Logo on top - ONLY for mobile (hidden on xl) - Symmetrically on the top edge of the bounding box */}
+            <div className="xl:hidden absolute top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
               <Logo className="w-16 h-16 filter drop-shadow-[0_4px_12px_rgba(112,179,36,0.3)]" />
             </div>
 
@@ -437,8 +437,8 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
               </div>
             </div>
 
-            {/* Bottom-right Green CTA Button floating matching image layout - Centered on mobile */}
-            <div className="mt-8 xl:mt-0 xl:absolute xl:right-0 xl:bottom-4 z-20 w-full xl:w-auto flex justify-center xl:block">
+            {/* Bottom-right Green CTA Button floating matching image layout - Centered on mobile on the bottom edge */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 w-full xl:w-auto flex justify-center xl:mt-0 xl:absolute xl:right-0 xl:bottom-4 xl:left-auto xl:translate-x-0 xl:translate-y-0 xl:z-20 xl:block">
               <button
                 onClick={onContactClick}
                 className="group flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-dark text-black font-extrabold px-6 py-4.5 rounded-2xl shadow-[0_4px_20px_rgba(112,179,36,0.35)] transition-all duration-300 transform active:scale-95 text-sm uppercase tracking-wider w-full max-w-xs justify-center xl:w-auto xl:max-w-none"
