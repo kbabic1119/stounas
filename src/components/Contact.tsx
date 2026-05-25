@@ -132,7 +132,7 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="Pvz: +370 600 00000"
+                      placeholder="Pvz: +370 646 03391"
                       className="w-full bg-brand-dark-lighter border border-white/5 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-brand-primary/50 transition-colors"
                     />
                   </div>
@@ -220,8 +220,8 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                 <Phone className="text-brand-primary mr-4 mt-1 shrink-0" size={20} />
                 <div className="space-y-1">
                   <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">{t.phone_lbl_title}</div>
-                  <a href="tel:+37060000000" className="text-sm font-bold text-zinc-100 hover:text-brand-primary transition-colors block">
-                    +370 600 00000
+                  <a href="tel:+37064603391" className="text-sm font-bold text-zinc-100 hover:text-brand-primary transition-colors block">
+                    +370 646 03391
                   </a>
                 </div>
               </div>

@@ -106,11 +106,11 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
 
             {/* Premium CTA Phone Button */}
             <a 
-              href="tel:+37060000000" 
+              href="tel:+37064603391" 
               className="flex items-center space-x-2 bg-gradient-to-r from-brand-primary to-brand-primary-dark text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:shadow-[0_0_15px_rgba(112,179,36,0.4)] transition-all duration-300"
             >
               <Phone size={14} className="animate-pulse" />
-              <span>+370 600 00000</span>
+              <span>+370 646 03391</span>
             </a>
           </div>
 
@@ -166,11 +166,11 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
             </div>
 
             <a 
-              href="tel:+37060000000" 
+              href="tel:+37064603391" 
               className="flex items-center justify-center space-x-2 w-full bg-brand-primary text-brand-dark font-black py-3 rounded-xl tracking-wider uppercase text-sm shadow-md"
             >
               <Phone size={16} />
-              <span>+370 600 00000</span>
+              <span>+370 646 03391</span>
             </a>
           </div>
         </div>
