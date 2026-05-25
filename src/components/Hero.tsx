@@ -163,7 +163,7 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
         <img 
           src={backgroundImage}
           alt="Serene cemetery landscape with granite gravestones"
-          className="absolute inset-0 w-full h-full object-cover object-bottom transition-opacity duration-1000"
+          className="absolute top-0 left-0 w-full h-[100vh] xl:h-full object-cover object-bottom transition-opacity duration-1000"
           referrerPolicy="no-referrer"
           onError={(e) => {
             // Fallback only if the main image fails to resolve
@@ -172,9 +172,9 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
         />
 
         {/* Minimal Overlays - High visibility approach */}
-        {/* Very subtle vignetting to help text pop without darkening the main scene */}
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-neutral-950/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/60 via-transparent to-transparent" />
+        {/* Darker gradients on mobile to help text pop, subtle vignetting on desktop */}
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/95 via-neutral-950/45 to-neutral-950/35 xl:from-neutral-950/80 xl:via-transparent xl:to-neutral-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/80 via-transparent to-transparent" />
         
         {/* Ambient brand glow - removed to keep colors natural as requested */}
         
