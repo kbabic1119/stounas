@@ -104,7 +104,7 @@ export default function Hero({ currentLang, onContactClick }: HeroProps) {
             </div>
 
             {/* Subcaption */}
-            <p className="text-zinc-300 font-sans font-medium text-lg sm:text-xl max-w-2xl leading-relaxed">
+            <p className="font-sans font-extrabold text-xl sm:text-2xl max-w-2xl leading-relaxed bg-gradient-to-r from-brand-primary to-white bg-clip-text text-transparent">
               {t.sub}
             </p>
 
