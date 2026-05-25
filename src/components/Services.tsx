@@ -15,13 +15,6 @@ export default function Services({ currentLang }: ServicesProps) {
     { icon: <Ruler size={32} />, title: t.serv4_title, desc: t.serv4_desc },
   ];
 
-  const steps = [
-    { num: '01', name: t.step1_name, desc: t.step1_desc },
-    { num: '02', name: t.step2_name, desc: t.step2_desc },
-    { num: '03', name: t.step3_name, desc: t.step3_desc },
-    { num: '04', name: t.step4_name, desc: t.step4_desc },
-  ];
-
   return (
     <section id="paslaugos" className="py-24 bg-[#141617] text-white relative">
       <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
@@ -90,41 +83,7 @@ export default function Services({ currentLang }: ServicesProps) {
           </div>
         </div>
 
-        {/* Steps Block */}
-        <div className="border-t border-white/5 pt-20">
-          <div className="text-center mb-12">
-            <h3 className="text-xl font-mono tracking-widest text-brand-gray font-bold uppercase">
-              {t.step_title}
-            </h3>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {steps.map((st, i) => (
-              <div key={i} className="relative group">
-                {/* Connector Line for big screens */}
-                {i < 3 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 right-[-50%] h-[1px] bg-zinc-800 group-hover:bg-brand-primary/50 transition-colors z-0" />
-                )}
-                
-                <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-                  {/* Number bubble */}
-                  <div className="w-16 h-16 rounded-2xl bg-brand-dark-lighter border border-white/5 flex items-center justify-center text-brand-primary font-display font-extrabold text-lg group-hover:bg-brand-primary group-hover:text-brand-dark shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-300">
-                    {st.num}
-                  </div>
-                  
-                  <div className="space-y-1">
-                    <h4 className="font-sans font-bold text-base text-zinc-100 group-hover:text-brand-primary transition-colors uppercase">
-                      {st.name}
-                    </h4>
-                    <p className="text-zinc-400 text-xs leading-relaxed max-w-xs">
-                      {st.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
       </div>
     </section>
