@@ -241,7 +241,7 @@ export const servicesTranslations = {
     headline: 'PASLAUGOS IR DARBŲ EIGA',
     title: 'Profesionalūs kapaviečių sprendimai nuo A iki Z',
     detailed_title: 'MŪSŲ TEIKIAMOS PASLAUGOS',
-    serv1_title: 'Didmeninis/Mažmeninis Tiekimas',
+    serv1_title: 'Didmeninis / Mažmeninis Tiekimas',
     serv1_desc: 'Tiekiame aukštos kokybės granito plokštes akmens apdirbimo dirbtuvėms, paminklų salonams bei privatiems klientams visoje Lietuvoje palankiomis sąlygomis.',
     serv2_title: 'Kapaviečių įrengimas',
     serv2_desc: 'Pilnas kapo sutvarkymas: pamatų liejimas, paminklų montavimas, skaldos užpylimas arba uždengimas plokštėmis, apželdinimas bei priežiūra.',
@@ -309,7 +309,7 @@ export const qualityTranslations = {
   LT: {
     headline: 'AUKŠČIAUSIŲ KOKYBĖS STANDARTŲ GARANTIJA',
     title: 'Apie akmens kokybę mes nekalbame – mes ją suteikiame',
-    sub: 'Paminklas kapavietėje statomas dešimtmečiams. Todėl kiekvienam užsakymui priskiriame unikalų gamybos pasą ir naudojame tik sertifikuotą natūralų granitą.',
+    sub: 'granito plokštės gaminamos ilgametei eksploatacijai. Todėl kiekvienam projektui parenkame aukštos kokybės natūralų granitą, užtikrinantį ilgaamžiškumą, atsparumą aplinkos poveikiui ir lengvą priežiūrą.',
     cert1_title: 'AUKŠTA KOKYBĖ',
     cert1_desc: 'Naudojame kruopščiai atrinktą natūralų Indišką granitą, pasižymintį ilgaamžiškumu ir atsparumu aplinkos poveikiui.',
     cert2_title: 'Maksimalus atsparumas atšilimui',
@@ -340,7 +340,7 @@ export const qualityTranslations = {
   EN: {
     headline: 'SUPREME QUALITY STANDARDS WARRANTY',
     title: 'We Do Not Just Talk Quality – We Provide It',
-    sub: 'Cemetery monuments are built to last generations. Therefore we assign a unique manufacturing passport and use only certified, pure natural granite.',
+    sub: 'Granite slabs are made for long-term operation. Therefore, we select high-quality natural granite for each project, ensuring durability, resistance to environmental impact, and easy maintenance.',
     cert1_title: 'PREMIUM QUALITY',
     cert1_desc: 'We use carefully selected natural Indian granite, characterized by durability and resistance to environmental impact.',
     cert2_title: 'Ultimate Frost Protection',
@@ -371,7 +371,7 @@ export const qualityTranslations = {
   RU: {
     headline: 'ГАРАНТИЯ ВЫСШИХ СТАНДАНТОВ КАЧЕСТВА',
     title: 'О качестве камня мы не говорим – мы его предоставляем',
-    sub: 'Памятник на могиле устанавливается на десятилетия. Поэтому на каждое изделие мы предоставляем паспорт качества и используем только сертифицированный натуральный гранит.',
+    sub: 'Гранитные плиты производятся для долговечной эксплуатации. Поэтому для каждого проекта мы подбираем высококачественный натуральный гранит, обеспечивающий долговечность, устойчивость к воздействию окружающей среды и простоту ухода.',
     cert1_title: 'ВЫСОКОЕ КАЧЕСТВО',
     cert1_desc: 'Мы используем тщательно отобранный натуральный индийский гранит, отличающийся долговечностью и устойчивостью к воздействию окружающей среды.',
     cert2_title: 'Сверхвысокая морозостойкость',

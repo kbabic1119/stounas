@@ -47,7 +47,7 @@ export default function Services({ currentLang, hideDetailedList = false }: Serv
                   {s.icon}
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold font-sans text-zinc-100 group-hover:text-brand-primary transition-colors uppercase">
+                  <h3 className="text-lg xl:text-xl font-black font-sans text-zinc-100 group-hover:text-brand-primary transition-colors uppercase leading-tight">
                     {s.title}
                   </h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">
