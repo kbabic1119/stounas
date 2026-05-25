@@ -428,8 +428,8 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                   </svg>
                 </div>
 
-                {/* Lit candle box overlay for warmth realism */}
-                <div className="absolute bottom-6 right-6 z-10 flex items-center space-x-2 bg-black/75 px-3 py-1.5 rounded-full border border-white/10 text-[9px] font-semibold text-zinc-300">
+                {/* Lit candle box overlay for warmth realism - Positioned top-right on mobile, bottom-right on desktop */}
+                <div className="absolute top-4 right-4 xl:top-auto xl:bottom-6 xl:right-6 z-10 flex items-center space-x-2 bg-black/75 px-3 py-1.5 rounded-full border border-white/10 text-[9px] font-semibold text-zinc-300">
                   <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping" />
                   <span className="font-mono text-[9px] text-amber-500">INDIVIDUALŪS UŽSAKYMAI</span>
                 </div>
@@ -458,10 +458,10 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md transition-all duration-300 animate-fade-in">
           <div className="bg-brand-dark border border-white/10 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative animate-scale-up">
             
-            {/* Close button */}
+            {/* Close button - High-contrast styling for clear visibility over bright images */}
             <button 
               onClick={() => setSelectedSpecimen(null)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors cursor-pointer z-20"
+              className="absolute top-4 right-4 p-2.5 rounded-full bg-black/60 hover:bg-black/85 text-white hover:scale-105 border border-white/20 transition-all cursor-pointer z-50 shadow-lg"
             >
               <X size={20} />
             </button>
