@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Mountain, ShieldCheck, Handshake, Layers, Target, Truck, MapPin, X } from 'lucide-react';
-import backgroundImage from './Gemini_Generated_Image_bwrlxcbwrlxcbwrl.png';
+import backgroundImage from './bg_compressed.jpg';
 import polishedBlackGranite from './polished_black_granite.png';
 import speckledGrayGranite from './speckled_gray_granite.png';
 import auroraRedGranite from './aurora_red_granite.png';
