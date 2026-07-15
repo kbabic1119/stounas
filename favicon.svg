@@ -1,0 +1,49 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greenTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#a3e635" />
+      <stop offset="100%" stopColor="#70b324" />
+    </linearGradient>
+    
+    <linearGradient id="greyLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#f4f4f5" />
+      <stop offset="100%" stopColor="#a1a1aa" />
+    </linearGradient>
+
+    <linearGradient id="blackRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#3f3f46" />
+      <stop offset="100%" stopColor="#18181b" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#70b324" stopOpacity="0.8" />
+      <stop offset="50%" stopColor="#ffffff" stopOpacity="0.1" />
+      <stop offset="100%" stopColor="#18181b" stopOpacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <polygon 
+    points="50,4 90,27 90,73 50,96 10,73 10,27" 
+    fill="#111315"
+    stroke="url(#borderGrad)"
+    strokeWidth="3.5"
+    strokeLinejoin="round"
+  />
+
+  <g transform="translate(0, 2)">
+    <polygon 
+      points="50,22 74,35 50,49 26,35" 
+      fill="url(#greenTop)" 
+    />
+    
+    <polygon 
+      points="26,35 50,49 50,77 26,63" 
+      fill="url(#greyLeft)" 
+    />
+    
+    <polygon 
+      points="50,49 74,35 74,63 50,77" 
+      fill="url(#blackRight)" 
+    />
+  </g>
+</svg>
