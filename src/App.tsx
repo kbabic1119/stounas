@@ -14,8 +14,17 @@ import ServicesPage from './pages/ServicesPage';
 import QualityPage from './pages/QualityPage';
 import ContactPage from './pages/ContactPage';
 
+const backgrounds = [
+  'bg_granite_quarry.jpg',
+  'bg_dark_stone.jpg',
+  'bg_granite_wall.jpg',
+  'bg_landscape.jpg',
+  'bg_construction_stone.jpg',
+];
+
 export default function App() {
   const [currentLang, setLang] = useState<'LT' | 'EN' | 'RU'>('LT');
+  const [bgIndex, setBgIndex] = useState(0);
 
   return (
     <Router>
@@ -23,8 +32,14 @@ export default function App() {
         
         {/* App-wide fixed background */}
         <div className="fixed inset-0 z-0 select-none pointer-events-none">
-          {/* Dark gradient with brand undertone */}
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-zinc-900 to-neutral-950" />
+          {/* Background image */}
+          <img
+            src={`${import.meta.env.BASE_URL}${backgrounds[bgIndex]}`}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+          />
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/85 via-zinc-900/75 to-neutral-950/85" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(112,179,36,0.06),transparent_60%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(112,179,36,0.03),transparent_50%)]" />
           
@@ -39,7 +54,10 @@ export default function App() {
         {/* Top Header */}
         <Header 
           currentLang={currentLang} 
-          setLang={setLang} 
+          setLang={setLang}
+          bgIndex={bgIndex}
+          setBgIndex={setBgIndex}
+          totalBackgrounds={backgrounds.length}
         />
 
         <main className="flex-grow relative z-10">
