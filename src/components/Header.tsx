@@ -3,6 +3,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import { headerTranslations } from '../data/translations';
+import { siteConfig } from '../data/siteConfig';
 
 interface HeaderProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -32,6 +33,7 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
 
   const menuItems = [
     { id: 'apie-mus', label: t.about, path: '/apie-mus' },
+    { id: 'produktai', label: t.products, path: '/produktai' },
     { id: 'paslaugos', label: t.services, path: '/paslaugos' },
     { id: 'kokybe', label: t.quality, path: '/kokybe' },
     { id: 'kontaktai', label: t.contact, path: '/kontaktai' },
@@ -106,11 +108,11 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
 
             {/* Premium CTA Phone Button */}
             <a 
-              href="tel:+37064603391" 
+              href={`tel:${siteConfig.phone}`} 
               className="flex items-center space-x-2 bg-gradient-to-r from-brand-primary to-brand-primary-dark text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:shadow-[0_0_15px_rgba(112,179,36,0.4)] transition-all duration-300"
             >
               <Phone size={14} className="animate-pulse" />
-              <span>+370 646 03391</span>
+              <span>{siteConfig.phoneDisplay}</span>
             </a>
           </div>
 
@@ -166,11 +168,11 @@ export default function Header({ currentLang, setLang }: HeaderProps) {
             </div>
 
             <a 
-              href="tel:+37064603391" 
+              href={`tel:${siteConfig.phone}`} 
               className="flex items-center justify-center space-x-2 w-full bg-brand-primary text-brand-dark font-black py-3 rounded-xl tracking-wider uppercase text-sm shadow-md"
             >
               <Phone size={16} />
-              <span>+370 646 03391</span>
+              <span>{siteConfig.phoneDisplay}</span>
             </a>
           </div>
         </div>

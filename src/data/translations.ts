@@ -1,6 +1,9 @@
-import polishedBlackGranite from '../components/polished_black_granite.png';
-import speckledGrayGranite from '../components/speckled_gray_granite.png';
-import auroraRedGranite from '../components/aurora_red_granite.png';
+import polishedBlackGranite from '../components/polished_black_granite.jpg';
+import viscountWhiteGranite from '../components/viscount_white.jpg';
+import auroraRedGranite from '../components/aurora_red_granite.jpg';
+import viscountWhiteNewGranite from '../components/viscount_white_new.jpg';
+import indianAurora2Granite from '../components/indian_aurora_2.jpg';
+import { siteConfig } from './siteConfig';
 
 export const headerTranslations = {
   LT: {
@@ -8,6 +11,7 @@ export const headerTranslations = {
     services: 'Paslaugos',
     quality: 'Kokybė',
     contact: 'Kontaktai',
+    products: 'Produktai',
     callUs: 'Skambinti',
   },
   EN: {
@@ -15,6 +19,7 @@ export const headerTranslations = {
     services: 'Services',
     quality: 'Quality',
     contact: 'Contacts',
+    products: 'Products',
     callUs: 'Call Now',
   },
   RU: {
@@ -22,6 +27,7 @@ export const headerTranslations = {
     services: 'Услуги',
     quality: 'Качество',
     contact: 'Контакты',
+    products: 'Продукция',
     callUs: 'Позвонить',
   }
 };
@@ -30,43 +36,61 @@ export const heroTranslations = {
   LT: {
     granite: 'GRANITAS.',
     quality: 'KOKYBĖ. PATIKIMUMAS.',
-    sub: 'Didmeninė granito prekyba ir kapaviečių įrengimai visoje Lietuvoje.',
+    sub: 'Didmeninė granito prekyba, pjovimas ir poliravimas visoje Lietuvoje.',
     feature1: 'DIDMENINĖ GRANITO PREKYBA',
-    feature2: 'KAPAVIEČIŲ ĮRENGIMAS',
+    feature2: 'PJOVIMAS IR POLIRAVIMAS',
     feature3: 'AUKŠTA KOKYBĖ',
     feature4: 'PATIKIMAS PARTNERIS',
-    pill1: 'PLATUS ASORTIMENTAS',
+    pill1_lbl: 'ASORTIMENTAS',
+    pill1: 'POPULIARIAUSI PASIRINKIMAI',
+    pill2_lbl: 'KREIPTIS / DARBŲ',
     pill2: 'TIKSLUMAS IR ATIDUMAS',
+    pill3_lbl: 'PRISTATYMAS',
     pill3: 'GREITAS PRISTATYMAS',
-    pill4: 'DIRBAME VISOJE LIETUVOJE',
+    pill4_lbl: 'APDIRBIMAS',
+    pill4: 'PILNAI POLIRUOTAS',
+    pill5_lbl: 'MATMENYS',
+    pill5: '255cm x 105cm x 3cm',
     cta: 'SUSISIEKITE SU MUMIS',
   },
   EN: {
     granite: 'GRANITE.',
     quality: 'QUALITY. RELIABILITY.',
-    sub: 'Wholesale granite supply and cemetery installation services across Lithuania.',
+    sub: 'Wholesale granite supply, cutting and polishing services across Lithuania.',
     feature1: 'WHOLESALE GRANITE',
-    feature2: 'CEMETERY INSTALLATION',
+    feature2: 'CUTTING & POLISHING',
     feature3: 'PREMIUM QUALITY',
     feature4: 'TRUSTED PARTNER',
-    pill1: 'WIDE VARIETY',
+    pill1_lbl: 'SELECTION',
+    pill1: 'MOST POPULAR CHOICES',
+    pill2_lbl: 'PROCESS / ACCURACY',
     pill2: 'PRECISION & ATTENTION',
+    pill3_lbl: 'DELIVERY',
     pill3: 'FAST DELIVERY',
-    pill4: 'WE WORK ALL OVER LITHUANIA',
+    pill4_lbl: 'FINISHING',
+    pill4: 'FULLY POLISHED',
+    pill5_lbl: 'DIMENSIONS',
+    pill5: '255cm x 105cm x 3cm',
     cta: 'CONTACT US',
   },
   RU: {
     granite: 'ГРАНИТ.',
     quality: 'КАЧЕСТВО. НАДЕЖНОСТЬ.',
-    sub: 'Оптовая торговля гранитом и обустройство могил по всей Литве.',
+    sub: 'Оптовая торговля гранитом, резка и полировка по всей Литве.',
     feature1: 'ОПТОВАЯ ТОРГОВЛЯ ГРАНИТОМ',
-    feature2: 'ОБУСТРОЙСТВО МОГИЛ',
+    feature2: 'РЕЗКА И ПОЛИРОВКА',
     feature3: 'ВЫСОКОЕ КАЧЕСТВО',
     feature4: 'НАДЕЖНЫЙ ПАРТНЕР',
-    pill1: 'ШИРОКИЙ АССОРТИМЕНТ',
+    pill1_lbl: 'АССОРТИМЕНТ',
+    pill1: 'ПОПУЛЯРНЫЕ ВАРИАНТЫ',
+    pill2_lbl: 'ПРОЦЕСС / СЛУЖБА',
     pill2: 'ТОЧНОСТЬ И ВНИМАНИЕ',
+    pill3_lbl: 'ДОСТАВКА',
     pill3: 'БЫСТРАЯ ДОСТАВКА',
-    pill4: 'РАБОТАЕМ ПО ВСЕЙ ЛИТВЕ',
+    pill4_lbl: 'ОБРАБОТКА',
+    pill4: 'ПОЛНОСТЬЮ ПОЛИРОВАННЫЙ',
+    pill5_lbl: 'РАЗМЕРЫ',
+    pill5: '255cm x 105cm x 3cm',
     cta: 'СВЯЗАТЬСЯ С НАМИ',
   }
 };
@@ -99,16 +123,16 @@ export const graniteSpecimens = [
   {
     id: 'black',
     name: {
-      LT: 'Poliruotas juodas granitas',
-      EN: 'Polished Black Granite',
-      RU: 'Полированный черный гранит',
+      LT: 'Absolute Black',
+      EN: 'Absolute Black',
+      RU: 'Absolute Black',
     },
     origin: {
-      LT: 'Švedija (Diabazas)',
-      EN: 'Sweden (Diabase)',
-      RU: 'Швеция (Диабаз)',
+      LT: 'Indija (Khammam, Telangana)',
+      EN: 'India (Khammam, Telangana)',
+      RU: 'Индия (Кхаммам, Телангана)',
     },
-    density: '3050 kg/m³',
+    density: '2970 kg/m³',
     frostResistance: {
       LT: 'F100 (Aukščiausia klasė)',
       EN: 'F100 (Highest class)',
@@ -116,59 +140,84 @@ export const graniteSpecimens = [
     },
     image: polishedBlackGranite,
     desc: {
-      LT: 'Aukščiausios klasės giliai juodas akmuo su smulkia mineraline struktūra. Ypač populiarus prabangiems paminklams, graviravimui ir dengiamosioms plokštėms.',
-      EN: 'Premium-grade deep black stone with a fine mineral structure. Highly popular for high-end monuments, laser engraving, and cover slabs.',
-      RU: 'Камень премиум-класса глубокого черного цвета с мелкой минеральной структурой. Очень популярен для элитных памятников, лазерной гравировки и облицовки.',
+      LT: 'Giliai juodas, vienalytis Indiškas granitas su itin smulkia kristaline struktūra. Vienas populiariausių akmenų pasaulyje architektūrinei apdailai, fasadams, interjerui ir išorės dangoms dėl išskirtinio atsparumo ir elegancijos.',
+      EN: 'Deep black, uniform Indian granite with an ultra-fine crystalline structure. One of the most popular stones worldwide for architectural cladding, facades, flooring, and interior/exterior applications due to its exceptional durability and elegant appearance.',
+      RU: 'Глубокий черный однородный индийский гранит с ультрамелкой кристаллической структурой. Один из самых популярных камней в мире для архитектурной облицовки, фасадов, напольных покрытий и интерьерных решений благодаря исключительной прочности и элегантности.',
     }
   },
   {
     id: 'gray',
     name: {
-      LT: 'Pilkas taškuotas granitas',
-      EN: 'Speckled Gray Granite',
-      RU: 'Серый пятнистый гранит',
+      LT: 'Kuppam Green',
+      EN: 'Kuppam Green',
+      RU: 'Kuppam Green',
     },
     origin: {
-      LT: 'Suomija (Kuru)',
-      EN: 'Finland (Kuru)',
-      RU: 'Финляндия (Куру)',
+      LT: 'Indija (Kupamas, Andhra Pradešas)',
+      EN: 'India (Kuppam, Andhra Pradesh)',
+      RU: 'Индия (Куппам, Андхра-Прадеш)',
     },
-    density: '2680 kg/m³',
+    density: '2620 kg/m³',
     frostResistance: {
-      LT: 'F100 (Aukšta)',
-      EN: 'F100 (High)',
-      RU: 'F100 (Высокая)',
+      LT: 'F100 (Aukščiausia klasė)',
+      EN: 'F100 (Highest class)',
+      RU: 'F100 (Высший класс)',
     },
-    image: speckledGrayGranite,
+    image: viscountWhiteGranite,
     desc: {
-      LT: 'Klasikinis šiaurietiškas šviesiai pilkas granitas su tamsiais mineralų intarpais. Pasižymi ypatingu atsparumu atmosferos poveikiui, puikiai tinka pamatų apdailai.',
-      EN: 'Classic Nordic light gray granite with dark mineral inclusions. Excellent weather resistance, perfect for foundation coverings and borders.',
-      RU: 'Классический скандинавский светло-серый гранит с темными вкраплениями. Обладает высокой устойчивостью к атмосферным воздействиям.',
+      LT: 'Šviesus žalsvas ir pilkas natūralus granitas su išraiškingais, bangų formos tamsiais raštais. Kiekviena plokštė turi unikalų raštą, suteikiantį architektūriniam projektui išskirtinį ir modernų estetinį vaizdą.',
+      EN: 'Light greenish-gray natural granite characterized by elegant, wavy dark patterns. Each slab features a unique flow, giving any architectural or interior project a highly distinct and modern aesthetic.',
+      RU: 'Светло-зеленоватый и серый натуральный гранит с выразительными волнообразными темными узорами. Каждый слэб уникален, придавая любому архитектурному или интерьерному проекту современный и эстетичный вид.',
     }
   },
   {
     id: 'aurora',
     name: {
-      LT: 'Aurora raudonas granitas',
-      EN: 'Aurora Red Granite',
-      RU: 'Аврора красный гранит',
+      LT: 'Indian Aurora',
+      EN: 'Indian Aurora',
+      RU: 'Indian Aurora',
     },
     origin: {
-      LT: 'Suomija / Norvegija',
-      EN: 'Finland / Norway',
-      RU: 'Финляндия / Норвегия',
+      LT: 'Indija',
+      EN: 'India',
+      RU: 'Индия',
     },
-    density: '2720 kg/m³',
+    density: '2980 kg/m³',
     frostResistance: {
-      LT: 'F100 (Aukšta)',
-      EN: 'F100 (High)',
-      RU: 'F100 (Высокая)',
+      LT: 'F100 (Aukščiausia klasė)',
+      EN: 'F100 (Highest class)',
+      RU: 'F100 (Высший класс)',
     },
     image: auroraRedGranite,
     desc: {
-      LT: 'Išskirtinis raudonai rudas banguotas granitas su juodomis mineralų venomis. Kiekviena plokštė turi unikalų, nepakartojamą gamtos raštą.',
-      EN: 'Unique red-brown wavy granite with black mineral veins. Every slab has a unique, non-repetitive natural pattern.',
-      RU: 'Уникальный красно-коричневый волнистый гранит с черными прожилками. Каждая плита имеет неповторимый природный рисунок.',
+      LT: 'Prabangus raudonai rudas banguotas granitas su dinamiškomis juodomis mineralinėmis gyslomis. Šis akmuo suteikia bet kuriam projektui išskirtinės šilumos ir elegancijos, o dėl didelio tankio yra ypatingai ilgaamžis.',
+      EN: 'Premium red-brown wavy granite with dynamic black mineral veins. This stone brings exceptional warmth and elegance to any project, and its high density makes it highly durable against extreme weather.',
+      RU: 'Роскошный красно-коричневый волнистый гранит с динамичными черными минеральными прожилками. Придает любому проекту теплоту и элегантность, а благодаря высокой плотности отличается долговечностью.',
+    }
+  },
+  {
+    id: 'viscount',
+    name: {
+      LT: 'Viscount White',
+      EN: 'Viscount White',
+      RU: 'Viscount White',
+    },
+    origin: {
+      LT: 'Indija',
+      EN: 'India',
+      RU: 'Индия',
+    },
+    density: '2660 kg/m³',
+    frostResistance: {
+      LT: 'F100 (Aukščiausia klasė)',
+      EN: 'F100 (Highest class)',
+      RU: 'F100 (Высший класс)',
+    },
+    image: viscountWhiteNewGranite,
+    desc: {
+      LT: 'Elegantiškas baltai pilkas granitas su dramatiškais tamsiais gyslų raštais, primenančiais natūralų kalnų peizažą. Itin išraiškingas akmuo, suteikiantis prabangos ir unikalumo bet kuriam projektui. Kiekviena plokštė — tai gamtos meno kūrinys.',
+      EN: 'Elegant white-grey granite with dramatic dark veining patterns resembling natural mountain landscapes. An exceptionally expressive stone that brings luxury and uniqueness to any project. Each slab is a work of art by nature.',
+      RU: 'Элегантный бело-серый гранит с драматичными темными прожилками, напоминающими природный горный пейзаж. Исключительно выразительный камень, придающий роскошь и уникальность любому проекту. Каждая плита — произведение искусства природы.',
     }
   }
 ];
@@ -177,12 +226,12 @@ export const aboutTranslations = {
   LT: {
     headline: 'APIE MB STOUNAS',
     title: 'Aukščiausios kokybės granitas ir profesionalus meistriškumas',
-    p1: 'MB „Stounas“ yra patikimas Jūsų partneris didmeninėje granito prekyboje ir kapaviečių projektavimo bei įrengimo paslaugose visoje Lietuvoje. Sukaupę didžiulę patirtį, deriname modernią akmens apdirbimo technologiją su autentišku meistriškumu.',
-    p2: 'Tiesiogiai iš didžiausių Indijos karjerų importuojame aukščiausios klasės akmenį. Mūsų misija – įamžinti atminimą ilgaamžiais gaminiais, kurie atlaiko laiko išbandymus ir atšiaurias klimato sąlygas.',
+    p1: 'MB „Stounas" yra patikimas Jūsų partneris didmeninėje granito prekyboje, pjovimo ir poliravimo paslaugose visoje Lietuvoje. Sukaupę didžiulę patirtį, deriname modernią akmens apdirbimo technologiją su autentišku meistriškumu.',
+    p2: 'Tiesiogiai iš didžiausių Indijos karjerų importuojame aukščiausios klasės akmenį. Mūsų misija – tiekti ilgaamžius, aukštos kokybės granito gaminius, kurie atlaiko laiko išbandymus ir atšiaurias klimato sąlygas.',
     stat1_num: '10+',
     stat1_txt: 'Metų patirtis',
     stat2_num: '800+',
-    stat2_txt: 'Įrengta kapaviečių',
+    stat2_txt: 'Patenkintų klientų',
     stat3_num: '100%',
     stat3_txt: 'Kokybės garantija',
     stat4_num: '24/7',
@@ -191,18 +240,18 @@ export const aboutTranslations = {
     val1_desc: 'Naudojame tik aukštos kokybės natūralų granitą, vertinamą dėl savo tvirtumo, atsparumo aplinkos poveikiui ir ilgaamžiškumo.',
     val2_title: 'Kruopštus apdirbimas',
     val2_desc: 'Kiekvienas gaminys ruošiamas atsakingai ir preciziškai, užtikrinant kokybę bei estetišką galutinį rezultatą.',
-    val3_title: 'Sklandus montavimas',
-    val3_desc: 'Ruošiame armuotus betoninius pamatus, apsaugančius paminklus nuo nusėdimo, pakrypimo ar įtrūkimų bėgant metams.',
+    val3_title: 'Tikslus pjovimas',
+    val3_desc: 'Naudojame modernią pjovimo įrangą, užtikrinančią tikslias matmenų tolerancijas ir tobulą paviršiaus apdailą kiekvienam užsakymui.',
   },
   EN: {
     headline: 'ABOUT MB STOUNAS',
     title: 'Premium Quality Granite and Professional Craftsmanship',
-    p1: 'MB "Stounas" is your reliable partner in wholesale granite sales, grave design, and installation services throughout Lithuania. With years of experience, we combine state-of-the-art stone processing technologies with authentic stone masonry.',
-    p2: 'We import top-grade blocks directly from Indian quarries. Our mission is to preserve memories through durable products that withstand seasonal extremes and the test of time.',
+    p1: 'MB "Stounas" is your reliable partner in wholesale granite sales, cutting, and polishing services throughout Lithuania. With years of experience, we combine state-of-the-art stone processing technologies with authentic stone masonry.',
+    p2: 'We import top-grade blocks directly from Indian quarries. Our mission is to supply durable, high-quality granite products that withstand seasonal extremes and the test of time.',
     stat1_num: '10+',
     stat1_txt: 'Years of Experience',
     stat2_num: '800+',
-    stat2_txt: 'Completed Sites',
+    stat2_txt: 'Satisfied Clients',
     stat3_num: '100%',
     stat3_txt: 'Quality Warranty',
     stat4_num: '24/7',
@@ -211,18 +260,18 @@ export const aboutTranslations = {
     val1_desc: 'We use only high-quality natural granite, valued for its strength, environmental resistance, and longevity.',
     val2_title: 'Meticulous workmanship',
     val2_desc: 'Each product is prepared responsibly and precisely, ensuring quality and an aesthetic final result.',
-    val3_title: 'Reinforced Foundations',
-    val3_desc: 'We construct thick, reinforced concrete basements preventing tombstone sinking or ground shifting over decades.',
+    val3_title: 'Precision Cutting',
+    val3_desc: 'We use modern cutting equipment ensuring tight dimensional tolerances and a perfect surface finish on every order.',
   },
   RU: {
     headline: 'О MB STOUNAS',
     title: 'Высококачественный гранит и профессиональное мастерство',
-    p1: 'MB "Stounas" — ваш надежный партнер в сфере оптовой продажи гранита, индивидуального проектирования и благоустройства могил по всей Литве. Мы совмещаем современные технологии и традиционное мастерство.',
-    p2: 'Мы поставляем гранитные блоки напрямую из крупнейших карьеров Индии. Наша цель — увековечить память усопших надежными изделиями, выдерживающими любые климатические условия.',
+    p1: 'MB "Stounas" — ваш надежный партнер в сфере оптовой продажи гранита, резки и полировки по всей Литве. Мы совмещаем современные технологии камнеобработки и традиционное мастерство.',
+    p2: 'Мы поставляем гранитные блоки напрямую из крупнейших карьеров Индии. Наша цель — предоставлять долговечную, высококачественную гранитную продукцию, выдерживающую любые климатические условия.',
     stat1_num: '10+',
     stat1_txt: 'Лет Опыта',
     stat2_num: '800+',
-    stat2_txt: 'Обустроенных могил',
+    stat2_txt: 'Довольных клиентов',
     stat3_num: '100%',
     stat3_txt: 'Гарантия Качества',
     stat4_num: '24/7',
@@ -231,77 +280,77 @@ export const aboutTranslations = {
     val1_desc: 'Мы используем только высококачественный натуральный гранит, ценящийся за свою прочность, устойчивость к воздействию окружающей среды и долговечность.',
     val2_title: 'Тщательная обработка',
     val2_desc: 'Каждое изделие подготавливается ответственно и с высокой точностью, обеспечивая качество и эстетичный результат.',
-    val3_title: 'Усиленный фундамент',
-    val3_desc: 'Создаем прочные армированные фундаменты, предотвращающие крен и усадку памятника со временем.',
+    val3_title: 'Точная резка',
+    val3_desc: 'Используем современное оборудование для резки, обеспечивая точные допуски размеров и идеальную отделку поверхности для каждого заказа.',
   }
 };
 
 export const servicesTranslations = {
   LT: {
     headline: 'PASLAUGOS IR DARBŲ EIGA',
-    title: 'Profesionalūs kapaviečių sprendimai nuo A iki Z',
+    title: 'Profesionalūs granito sprendimai nuo tiekimo iki apdailos',
     detailed_title: 'MŪSŲ TEIKIAMOS PASLAUGOS',
     serv1_title: 'Didmeninis / Mažmeninis Tiekimas',
-    serv1_desc: 'Tiekiame aukštos kokybės granito plokštes akmens apdirbimo dirbtuvėms, paminklų salonams bei privatiems klientams visoje Lietuvoje palankiomis sąlygomis.',
-    serv2_title: 'Kapaviečių įrengimas',
-    serv2_desc: 'Pilnas kapo sutvarkymas: pamatų liejimas, paminklų montavimas, skaldos užpylimas arba uždengimas plokštėmis, apželdinimas bei priežiūra.',
+    serv1_desc: 'Tiekiame aukštos kokybės granito plokštes akmens apdirbimo dirbtuvėms, statybos įmonėms bei privatiems klientams visoje Lietuvoje palankiomis sąlygomis.',
+    serv2_title: 'Individualus Pjovimas ir Matmenys',
+    serv2_desc: 'Pjaustome granito plokštes pagal individualius kliento užsakymus: tikslūs matmenys, lygūs pjūviai ir paruoštos briaunos kiekvienam projektui.',
     serv3_title: '3D vizualizacijos',
-    serv3_desc: 'Prieš pradedant darbus, sukuriame tikroviškus kapavietės 3D maketus, kad užsakovas matytų realų būsimą rezultatą ir pasirinktų geriausią akmens derinį.',
+    serv3_desc: 'Prieš pradedant darbus, sukuriame tikroviškus 3D maketus, kad užsakovas matytų realų būsimą rezultatą ir pasirinktų geriausią akmens derinį.',
     serv4_title: 'Akmens pjovimas & Graviravimas',
-    serv4_desc: 'Kompiuterizuotas raidžių, portretų bei šventųjų paveikslų iškalimas gilaus graviravimo lazeriu būdu paveldo išsaugojimui.',
+    serv4_desc: 'Kompiuterizuotas raidžių, portretų bei dekoratyvinių elementų iškalimas gilaus graviravimo lazeriu būdu.',
     step_title: 'MŪSŲ DARBŲ PROCESAS',
     step1_name: 'Nemokama konsultacija',
-    step1_desc: 'Išklausome norus, įvertiname kapavietės vietą bei paruošiame preliminarų biudžetą.',
+    step1_desc: 'Išklausome norus, įvertiname projekto reikalavimus bei paruošiame preliminarų biudžetą.',
     step2_name: 'Projektavimas ir Derinimas',
-    step2_desc: 'Susitinkame vietoje, atliekame reikalingus išmatavimus, aptariame kapavietės sprendimus bei padedame parinkti tinkamiausią granito spalvą ir dizainą.',
-    step3_name: 'Betonavimas & Pamatas',
-    step3_desc: 'Liejame tvirtą armuotą gelžbetonį, atitinkantį visus statybos mechaninius reikalavimus.',
-    step4_name: 'Montavimas & Pridavimas',
-    step4_desc: 'Sumontuojame paminklus bei priedus, išlyginame aplinką ir atsiskaitome tik už pabaigtą kokybišką rezultatą.',
+    step2_desc: 'Aptariame pjovimo ir apdailos sprendimus, atliekame reikalingus išmatavimus bei padedame parinkti tinkamiausią granito spalvą ir dizainą.',
+    step3_name: 'Apdorojimas & Gamyba',
+    step3_desc: 'Tikslus pjovimas ir poliravimas naudojant modernią įrangą, atitinkančią aukščiausius kokybės standartus.',
+    step4_name: 'Pristatymas & Pridavimas',
+    step4_desc: 'Pristatome gatavus gaminius laiku ir atsiskaitome tik už pabaigtą kokybišką rezultatą.',
   },
   EN: {
     headline: 'SERVICES & WORKFLOW',
-    title: 'Professional Grave Setup From Draft to Care',
+    title: 'Professional Granite Solutions From Supply to Finish',
     detailed_title: 'OUR PROVIDED SERVICES',
     serv1_title: 'Wholesale & Retail Supply',
-    serv1_desc: 'We supply high-quality granite slabs to stonemason workshops, monument salons, and private clients across Lithuania under favorable conditions.',
-    serv2_title: 'Comprehensive Installation',
-    serv2_desc: 'Full cemetery arrangement: concrete basements pouring, headstone setups, gravel fillings, top slab coverings, and restoration works.',
+    serv1_desc: 'We supply high-quality granite slabs to stonemason workshops, construction companies, and private clients across Lithuania under favorable conditions.',
+    serv2_title: 'Custom Cutting & Sizing',
+    serv2_desc: 'We cut granite slabs to individual client specifications: precise dimensions, clean cuts, and prepared edges for every project.',
     serv3_title: 'Photorealistic 3D Drafts',
-    serv3_desc: 'Prior to site work, we build lifelike 3D mockups. This allows clients to preview the landscape and confidently pick granite color matching.',
+    serv3_desc: 'Prior to production, we build lifelike 3D mockups. This allows clients to preview the result and confidently pick granite color matching.',
     serv4_title: 'Laser Engraving & Inscriptions',
-    serv4_desc: 'Computerized laser and sandblast carving of fonts, crosses, and relief portraits with deeply indented stone protection coatings.',
+    serv4_desc: 'Computerized laser and sandblast carving of lettering, decorative elements, and relief work with deeply indented stone protection coatings.',
     step_title: 'OUR STREAMLINED PROCESS',
     step1_name: 'Free Consultation',
-    step1_desc: 'We carefully discuss your ideas, evaluate site topography, and outline estimated budget ranges.',
+    step1_desc: 'We carefully discuss your ideas, evaluate project requirements, and outline estimated budget ranges.',
     step2_name: 'Design & Matching',
-    step2_desc: 'We meet on site, take the necessary measurements, discuss grave solutions, and help you choose the most suitable granite color and design.',
-    step3_name: 'Reinforced Concrete Foundation',
-    step3_desc: 'We pour steel-mesh reinforced premium concrete to safely anchor heavy granite works.',
-    step4_name: 'Flawless Setup',
-    step4_desc: 'We meticulously install monuments, level and clean the surrounding area for your final approval.',
+    step2_desc: 'We discuss cutting and finishing solutions, take the necessary measurements, and help you choose the most suitable granite color and design.',
+    step3_name: 'Processing & Production',
+    step3_desc: 'Precision cutting and polishing using modern equipment meeting the highest quality standards.',
+    step4_name: 'Delivery & Handover',
+    step4_desc: 'We deliver finished products on time and only settle payment upon a completed, quality-approved result.',
   },
   RU: {
     headline: 'УСЛУГИ И ЭТАПЫ РАБОТ',
-    title: 'Профессиональные решения для могил от А до Я',
+    title: 'Профессиональные гранитные решения от поставки до отделки',
     detailed_title: 'ПРЕДОСТАВЛЯЕМЫЕ УСЛУГИ',
     serv1_title: 'Оптовые и розничные поставки',
-    serv1_desc: 'Мы поставляем высококачественные гранитные плиты камнеобрабатывающим мастерским, салонам памятников и частным клиентам по всей Литве на выгодных условиях.',
-    serv2_title: 'Обустройство под ключ',
-    serv2_desc: 'Весь комплекс работ: заливка фундаментов, установка памятников, засыпка щебнем, укладка гранитных плит, озеленение.',
+    serv1_desc: 'Мы поставляем высококачественные гранитные плиты камнеобрабатывающим мастерским, строительным компаниям и частным клиентам по всей Литве на выгодных условиях.',
+    serv2_title: 'Индивидуальная резка и подгонка размеров',
+    serv2_desc: 'Режем гранитные плиты по индивидуальным заказам клиента: точные размеры, чистые срезы и подготовленные кромки для любого проекта.',
     serv3_title: '3D Визуализация',
-    serv3_desc: 'Создаем трехмерную модель будущей могилы, чтобы вы могли увидеть сочетание камня и оценить дизайн до начала работ.',
-    serv4_title: 'Резерка & Компьютерная гравировка',
-    serv4_desc: 'Сверхточная гравировка букв, эпитафий и портретов на камне профессиональным пескоструйным и лазерным оборудованием.',
+    serv3_desc: 'Создаем трехмерную модель будущего изделия, чтобы вы могли оценить сочетание камня и дизайн до начала производства.',
+    serv4_title: 'Резка & Компьютерная гравировка',
+    serv4_desc: 'Сверхточная гравировка букв, декоративных элементов и рельефов на камне профессиональным пескоструйным и лазерным оборудованием.',
     step_title: 'НАШ РАБОЧИЙ ПРОЦЕСС',
     step1_name: 'Бесплатная Консультация',
-    step1_desc: 'Согласуем пожелания, оцениваем рельеф участка и подбираем ценовой диапазон.',
+    step1_desc: 'Согласуем пожелания, оцениваем требования проекта и подбираем ценовой диапазон.',
     step2_name: 'Проектирование и согласование',
-    step2_desc: 'Встречаемся на месте, проводим необходимые замеры, обсуждаем варианты благоустройства и помогаем выбрать наиболее подходящий цвет и дизайн гранита.',
-    step3_name: 'Заливка фундамента',
-    step3_desc: 'Заливаем надежный армированный бетонный цоколь с гидроизоляцией.',
-    step4_name: 'Монтаж и Сдача',
-    step4_desc: 'Монтируем памятник, гранитные ограды, убираем территорию и сдаем работу.',
+    step2_desc: 'Обсуждаем варианты резки и отделки, проводим необходимые замеры и помогаем выбрать наиболее подходящий цвет и дизайн гранита.',
+    step3_name: 'Обработка и Производство',
+    step3_desc: 'Точная резка и полировка с использованием современного оборудования, соответствующего высочайшим стандартам качества.',
+    step4_name: 'Доставка и Сдача',
+    step4_desc: 'Доставляем готовые изделия в срок и принимаем оплату только после завершения и одобрения результата.',
   }
 };
 
@@ -323,7 +372,6 @@ export const qualityTranslations = {
     comp_others: 'Mūsų prioritetai',
     us_list: [
       'Ilgaamžės granito medžiagos',
-      'Kokybiškas montavimas pagal Lietuvos klimatą',
       'Patyrę meistrai ir kruopštus apdirbimas',
       'Konsultacija bei matavimai vietoje',
       'Individualus dizaino pritaikymas',
@@ -354,7 +402,6 @@ export const qualityTranslations = {
     comp_others: 'Our Priorities',
     us_list: [
       'Durable granite materials',
-      'Quality installation tailored to the Lithuanian climate',
       'Experienced craftsmen and meticulous processing',
       'On-site consultation and measurements',
       'Custom design adaptation',
@@ -385,7 +432,6 @@ export const qualityTranslations = {
     comp_others: 'Наши приоритеты',
     us_list: [
       'Долговечные гранитные материалы',
-      'Качественный монтаж с учетом литовского климата',
       'Опытные мастера и тщательная обработка',
       'Консультация и замеры на месте',
       'Индивидуальная адаптация дизайна',
@@ -481,10 +527,11 @@ export const contactTranslations = {
 
 export const footerTranslations = {
   LT: {
-    desc: 'Sertifikuoto natūralaus iš Indijos kalnų importuoto granito gamyba, tiesioginis didmeninis tiekimas bei kapaviečių projektavimo-apdailos darbai visoje Lietuvoje.',
+    desc: 'Sertifikuoto natūralaus iš Indijos kalnų importuoto granito gamyba, tiesioginis didmeninis tiekimas, pjovimas ir poliravimas visoje Lietuvoje.',
     links_title: 'Meniu Nuorodos',
     home: 'Pradžia',
     about: 'Apie mus',
+    products: 'Produktai',
     services: 'Paslaugos',
     quality: 'Kokybė',
     legal_title: 'Saugumas & Teisinė info',
@@ -494,10 +541,11 @@ export const footerTranslations = {
     rights: 'Visos teisės saugomos. Šis tinklalapis yra apsaugotas Lietuvos Respublikos autorių teisių įstatymo.',
   },
   EN: {
-    desc: 'Manufacturing of certified natural granite imported from Indian mountains, direct wholesale deliveries, and graveyard landscape masonry setups throughout Lithuania.',
+    desc: 'Manufacturing of certified natural granite imported from Indian mountains, direct wholesale deliveries, precision cutting and polishing services throughout Lithuania.',
     links_title: 'Quick Navigation',
     home: 'Home',
     about: 'About Us',
+    products: 'Products',
     services: 'Services',
     quality: 'Quality Warranty',
     legal_title: 'Legal & Compliance',
@@ -507,10 +555,11 @@ export const footerTranslations = {
     rights: 'All rights reserved. Replications without legal consent are strictly prohibited by active IP legislation.',
   },
   RU: {
-    desc: 'Производство сертифицированного натурального гранита, импортируемого из индийских гор, прямые оптовые поставки и благоустройство могил по всей территории Литвы.',
+    desc: 'Производство сертифицированного натурального гранита, импортируемого из индийских гор, прямые оптовые поставки, точная резка и полировка по всей территории Литвы.',
     links_title: 'Карта сайта',
     home: 'Главная',
     about: 'О нас',
+    products: 'Продукция',
     services: 'Услуги',
     quality: 'Карантия качества',
     legal_title: 'Правовая информация',
@@ -521,66 +570,62 @@ export const footerTranslations = {
   }
 };
 
+export const productsTranslations = {
+  LT: {
+    headline: 'ASORTIMENTAS',
+    title: 'Mūsų Granito Asortimentas',
+    sub: 'Aukščiausios kokybės natūralus granitas iš Indijos karjerų. Kiekvienas akmuo kruopščiai atrinktas ir profesionaliai apdorotas.',
+    clickForDetails: 'Spustelėkite plačiau →',
+  },
+  EN: {
+    headline: 'SELECTION',
+    title: 'Our Granite Selection',
+    sub: 'Premium quality natural granite from Indian quarries. Each stone is carefully selected and professionally processed.',
+    clickForDetails: 'Click for details →',
+  },
+  RU: {
+    headline: 'АССОРТИМЕНТ',
+    title: 'Наш ассортимент гранита',
+    sub: 'Натуральный гранит высшего качества из индийских карьеров. Каждый камень тщательно отобран и профессионально обработан.',
+    clickForDetails: 'Нажмите для подробностей →',
+  }
+};
+
 export const detailedServicesList = [
   {
-    LT: 'Gaminame paminklus',
-    EN: 'Monument Manufacturing',
-    RU: 'Изготовление памятников'
+    LT: 'Granitinių plokščių tiekimas',
+    EN: 'Granite Slab Supply',
+    RU: 'Поставка гранитных плит'
   },
   {
-    LT: 'Kapų dengimas plokštėmis',
-    EN: 'Grave Covering with Slabs',
-    RU: 'Покрытие могил плитами'
+    LT: 'Individualus pjovimas pagal matmenis',
+    EN: 'Custom Cutting to Size',
+    RU: 'Индивидуальная резка по размерам'
   },
   {
-    LT: 'Paminklo montavimas',
-    EN: 'Monument Installation',
-    RU: 'Установка памятников'
+    LT: 'Paviršiaus poliravimas',
+    EN: 'Surface Polishing',
+    RU: 'Полировка поверхности'
   },
   {
-    LT: 'Plokštės kapams',
-    EN: 'Grave Slabs',
-    RU: 'Плиты для могил'
+    LT: 'Briaunų apdirbimas',
+    EN: 'Edge Profiling',
+    RU: 'Обработка кромок'
   },
   {
-    LT: 'Kapaviečių įrengimas',
-    EN: 'Cemetery Arrangement',
-    RU: 'Обустройство могил'
+    LT: 'Didmeniniai užsakymai',
+    EN: 'Wholesale Orders',
+    RU: 'Оптовые заказы'
   },
   {
-    LT: 'Kapų tvorelės',
-    EN: 'Grave Fences',
-    RU: 'Ограды для могил'
+    LT: 'Pristatymas visoje Lietuvoje',
+    EN: 'Nationwide Delivery',
+    RU: 'Доставка по всей Литве'
   },
   {
-    LT: 'Paminklų restauravimas',
-    EN: 'Monument Restoration',
-    RU: 'Реставрация памятников'
-  },
-  {
-    LT: 'Kapų dekoravimas skaldele',
-    EN: 'Grave Decoration with Gravel',
-    RU: 'Декорирование могил щебнем'
-  },
-  {
-    LT: 'Pamatų apdaila',
-    EN: 'Foundation Decoration',
-    RU: 'Отделка фундамента'
-  },
-  {
-    LT: 'Paminklų statymas',
-    EN: 'Monument Erection',
-    RU: 'Монтаж надгробий'
-  },
-  {
-    LT: 'Granitinės plokštės',
-    EN: 'Granite Slabs',
-    RU: 'Гранитные плиты'
-  },
-  {
-    LT: 'Skaldos užpylimas',
-    EN: 'Gravel Filling',
-    RU: 'Засыпка щебнем'
+    LT: 'Lazerinė graviūra',
+    EN: 'Laser Engraving',
+    RU: 'Лазерная гравировка'
   },
   {
     LT: 'Raidžių kalimas',
@@ -591,6 +636,21 @@ export const detailedServicesList = [
     LT: 'Portretų kalimas',
     EN: 'Portrait Carving',
     RU: 'Гравировка портретов'
+  },
+  {
+    LT: 'Granito pavyzdžių atranka',
+    EN: 'Sample Selection',
+    RU: 'Подбор образцов камня'
+  },
+  {
+    LT: 'Granitinės plokštės',
+    EN: 'Granite Slabs',
+    RU: 'Гранитные плиты'
+  },
+  {
+    LT: '3D vizualizacijos',
+    EN: '3D Visualisation',
+    RU: '3D Визуализация'
   }
 ];
 

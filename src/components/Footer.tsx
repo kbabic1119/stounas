@@ -1,13 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import { footerTranslations } from '../data/translations';
+import { siteConfig } from '../data/siteConfig';
 
 interface FooterProps {
   currentLang: 'LT' | 'EN' | 'RU';
 }
 
 export default function Footer({ currentLang }: FooterProps) {
-  const currentYear = 2026;
+  const currentYear = new Date().getFullYear();
 
   const t = footerTranslations[currentLang];
 
@@ -51,26 +53,31 @@ export default function Footer({ currentLang }: FooterProps) {
             <h4 className="font-sans font-extrabold text-sm tracking-wider uppercase text-zinc-200">
               {t.links_title}
             </h4>
-            <ul className="space-y-2.5 text-zinc-500 font-bold uppercase text-[11px] tracking-wider">
+            <ul className="space-y-2.5 text-zinc-500 font-bold uppercase text-[11px] tracking-wider flex flex-col items-start">
               <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-brand-primary transition-colors cursor-pointer">
+                <Link to="/" className="hover:text-brand-primary transition-colors cursor-pointer">
                   {t.home}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => handleScrollToId('apie-mus')} className="hover:text-brand-primary transition-colors cursor-pointer">
+                <Link to="/apie-mus" className="hover:text-brand-primary transition-colors cursor-pointer">
                   {t.about}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => handleScrollToId('paslaugos')} className="hover:text-brand-primary transition-colors cursor-pointer">
+                <Link to="/produktai" className="hover:text-brand-primary transition-colors cursor-pointer">
+                  {t.products}
+                </Link>
+              </li>
+              <li>
+                <Link to="/paslaugos" className="hover:text-brand-primary transition-colors cursor-pointer">
                   {t.services}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => handleScrollToId('kokybe')} className="hover:text-brand-primary transition-colors cursor-pointer">
+                <Link to="/kokybe" className="hover:text-brand-primary transition-colors cursor-pointer">
                   {t.quality}
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,7 +90,7 @@ export default function Footer({ currentLang }: FooterProps) {
             <ul className="space-y-2 text-zinc-400 text-xs font-semibold">
               <li className="hover:text-white transition-colors cursor-pointer">{t.policy}</li>
               <li className="hover:text-white transition-colors cursor-pointer">{t.rules}</li>
-              <li className="text-zinc-500 pt-2 font-mono text-[11px] block">{t.license}</li>
+              <li className="text-zinc-500 pt-2 font-mono text-[11px] block">{siteConfig.licenseNumber}</li>
             </ul>
           </div>
 

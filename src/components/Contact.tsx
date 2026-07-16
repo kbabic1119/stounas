@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { contactTranslations } from '../data/translations';
+import { siteConfig } from '../data/siteConfig';
 
 interface ContactProps {
   currentLang: 'LT' | 'EN' | 'RU';
@@ -35,7 +36,7 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
   }, [prefilledNotes]);
   const t = contactTranslations[currentLang];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) {
       setSubmitError(true);
@@ -46,17 +47,29 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
     setIsSubmitting(true);
     setSubmitError(false);
 
-    // Simulated API response delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, email, notes, lang: currentLang }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Server error');
+      }
+
       setSubmitSuccess(true);
-      
-      // Clean up fields
       setName('');
       setEmail('');
       setPhone('');
       setNotes('');
-    }, 1500);
+    } catch (err) {
+      setSubmitError(true);
+      setTimeout(() => setSubmitError(false), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -199,7 +212,7 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                 <MapPin className="text-brand-primary mr-4 mt-1 shrink-0" size={20} />
                 <div className="space-y-1">
                   <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">{t.address_lbl}</div>
-                  <div className="text-sm font-semibold text-zinc-200">{t.address_val}</div>
+                  <div className="text-sm font-semibold text-zinc-200">{siteConfig.address}</div>
                 </div>
               </div>
 
@@ -209,8 +222,8 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                 <div className="space-y-1">
                   <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">{t.work_lbl}</div>
                   <div className="text-sm font-semibold text-zinc-200 space-y-0.5">
-                    <div>{t.work_val1}</div>
-                    <div className="text-xs text-zinc-400">{t.work_val2}</div>
+                    <div>{siteConfig.workingHours.monFri}</div>
+                    <div className="text-xs text-zinc-400">{siteConfig.workingHours.sat}</div>
                   </div>
                 </div>
               </div>
@@ -220,8 +233,8 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                 <Phone className="text-brand-primary mr-4 mt-1 shrink-0" size={20} />
                 <div className="space-y-1">
                   <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">{t.phone_lbl_title}</div>
-                  <a href="tel:+37064603391" className="text-sm font-bold text-zinc-100 hover:text-brand-primary transition-colors block">
-                    +370 646 03391
+                  <a href={`tel:${siteConfig.phone}`} className="text-sm font-bold text-zinc-100 hover:text-brand-primary transition-colors block">
+                    {siteConfig.phoneDisplay}
                   </a>
                 </div>
               </div>
@@ -231,8 +244,8 @@ export default function Contact({ currentLang, prefilledNotes }: ContactProps) {
                 <Mail className="text-brand-primary mr-4 mt-1 shrink-0" size={20} />
                 <div className="space-y-1">
                   <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">{t.email_lbl_title}</div>
-                  <a href="mailto:info@mbstounas.lt" className="text-sm font-bold text-zinc-100 hover:text-brand-primary transition-colors block">
-                    info@mbstounas.lt
+                  <a href={`mailto:${siteConfig.email}`} className="text-sm font-bold text-zinc-100 hover:text-brand-primary transition-colors block">
+                    {siteConfig.email}
                   </a>
                 </div>
               </div>

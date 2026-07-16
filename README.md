@@ -1,6 +1,6 @@
-# MB Stounas — Premium Granite & Cemetery Installations
+# MB Stounas — Premium Granite Supply, Cutting & Polishing
 
-An elegant, high-performance landing page for **MB Stounas**, a wholesale granite supply and cemetery installation business operating throughout Lithuania.
+An elegant, high-performance landing page for **MB Stounas**, a wholesale granite supply, cutting, and polishing business operating throughout Lithuania.
 
 ## 🌟 Key Features
 
@@ -59,4 +59,15 @@ To build the static application assets for deployment:
 npm run build
 ```
 
-This compiles your TypeScript, bundles code and assets, and places the production-ready files inside the `dist/` directory, which can be hosted directly on platforms like **Vercel**, **Netlify**, or **GitHub Pages**.
+This compiles your TypeScript, bundles code and assets, and places the production-ready files inside the `dist/` directory.
+
+## 🚀 Deploying to Hostinger
+
+1. Build the project: `npm run build`
+2. Upload everything from `dist/` to `public_html/` on your Hostinger account
+3. Also upload `api/contact.php` to `public_html/api/contact.php`
+4. The `.htaccess` file is already in `dist/` -- it handles SPA routing, security headers, and caching
+
+**Contact form:** The form posts to `/api/contact.php` which sends email via PHP `mail()`. Make sure Hostinger's mail function is configured. Update `$to_email` in `api/contact.php` if needed.
+
+**To change business info:** Edit `src/data/siteConfig.ts` -- phone, email, address, working hours are all in one place.

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Mountain, ShieldCheck, Handshake, Layers, Target, Truck, MapPin, X } from 'lucide-react';
+import { ArrowRight, Mountain, ShieldCheck, Handshake, Layers, Target, Truck, MapPin, Ruler, X } from 'lucide-react';
 import backgroundImage from './bg_compressed.jpg';
 import Logo from './Logo';
 import { heroTranslations, heroModalTranslations, graniteSpecimens as baseSpecimens } from '../data/translations';
@@ -34,29 +34,11 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
   return (
     <section className="relative min-h-[105vh] bg-neutral-950 flex flex-col justify-center overflow-hidden pt-24 pb-16">
       
-      {/* Full-bleed serene atmospheric cemetery background layer */}
+      {/* Background enhancements on top of fixed app background */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        {/* User provided background image - Focused on green grass and gray granite gravestones */}
-        <img 
-          src={backgroundImage}
-          alt="Serene cemetery landscape with granite gravestones"
-          className="absolute top-0 left-0 w-full h-[100vh] xl:h-full object-cover object-bottom transition-opacity duration-1000"
-          referrerPolicy="no-referrer"
-          onError={(e) => {
-            // Fallback only if the main image fails to resolve
-            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1542662565-7e4b66bae529?auto=format&fit=crop&q=80&w=2000';
-          }}
-        />
-
-        {/* Minimal Overlays - High visibility approach */}
-        {/* Darker gradients on mobile to help text pop, subtle vignetting on desktop */}
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/95 via-neutral-950/45 to-neutral-950/35 xl:from-neutral-950/80 xl:via-transparent xl:to-neutral-950/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/80 via-transparent to-transparent" />
-        
-        {/* Ambient brand glow - removed to keep colors natural as requested */}
-        
-        {/* Granite crystalline overlay - extremely minimal */}
-        <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/granite.png')]" />
+        {/* Brand green glow accents */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(112,179,36,0.06),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(112,179,36,0.03),transparent_50%)]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -105,7 +87,7 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
               {/* Box 2 */}
               <div className="group flex flex-col items-center sm:items-start text-center sm:text-left space-y-3 cursor-pointer">
                 <div className="transition-transform duration-300 group-hover:-translate-y-1">
-                  {/* Cemetery element / Tombstone svg matching image style */}
+                  {/* Cutting & Polishing icon element */}
                   <svg className="w-10 h-10 text-brand-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 2A7 7 0 005 9v11a1 1 0 001 1h12a1 1 0 001-1V9a7 7 0 00-7-7z" />
                     <path strokeLinecap="round" d="M12 6v6M10 8h4" />
@@ -150,47 +132,50 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
 
             {/* Bottom Glass Pill Overlay (as shown in image) */}
             <div className="pt-6">
-              <div className="glass-panel rounded-2xl md:rounded-full p-4 md:p-1.5 border border-white/5 shadow-2xl flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 md:gap-1.5 w-full">
+              <div className="glass-panel rounded-3xl md:rounded-full p-4 md:p-1.5 border border-white/5 shadow-2xl flex flex-col md:grid md:grid-cols-5 items-stretch gap-4 md:gap-0 w-full">
                 
                 {/* Pill segment 1 */}
-                <div className="flex items-center space-x-3 px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full transition-colors flex-1">
-                  <Layers size={20} className="text-brand-primary flex-shrink-0" />
-                  <div className="text-left">
-                    <div className="text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">ASORTIMENTAS</div>
-                    <div className="text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-1">{t.pill1}</div>
+                <div className="flex items-center space-x-2 px-3 md:px-2 lg:px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full md:border-r border-zinc-800/80 last:border-r-0 transition-colors">
+                  <Layers size={18} className="text-brand-primary flex-shrink-0" />
+                  <div className="text-left min-w-0">
+                    <div className="text-[9px] lg:text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">{t.pill1_lbl}</div>
+                    <div className="text-[10px] lg:text-[11px] xl:text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-2 leading-tight">{t.pill1}</div>
                   </div>
                 </div>
-
-                <div className="hidden md:block w-px h-8 bg-zinc-800 self-center" />
 
                 {/* Pill segment 2 */}
-                <div className="flex items-center space-x-3 px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full transition-colors flex-1">
-                  <Target size={20} className="text-brand-primary flex-shrink-0" />
-                  <div className="text-left">
-                    <div className="text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">KREIPTIS / DARBŲ</div>
-                    <div className="text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-1">{t.pill2}</div>
+                <div className="flex items-center space-x-2 px-3 md:px-2 lg:px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full md:border-r border-zinc-800/80 last:border-r-0 transition-colors">
+                  <Target size={18} className="text-brand-primary flex-shrink-0" />
+                  <div className="text-left min-w-0">
+                    <div className="text-[9px] lg:text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">{t.pill2_lbl}</div>
+                    <div className="text-[10px] lg:text-[11px] xl:text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-2 leading-tight">{t.pill2}</div>
                   </div>
                 </div>
-
-                <div className="hidden md:block w-px h-8 bg-zinc-800 self-center" />
 
                 {/* Pill segment 3 */}
-                <div className="flex items-center space-x-3 px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full transition-colors flex-1">
-                  <Truck size={20} className="text-brand-primary flex-shrink-0" />
-                  <div className="text-left">
-                    <div className="text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">PRISTATYMAS</div>
-                    <div className="text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-1">{t.pill3}</div>
+                <div className="flex items-center space-x-2 px-3 md:px-2 lg:px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full md:border-r border-zinc-800/80 last:border-r-0 transition-colors">
+                  <Truck size={18} className="text-brand-primary flex-shrink-0" />
+                  <div className="text-left min-w-0">
+                    <div className="text-[9px] lg:text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">{t.pill3_lbl}</div>
+                    <div className="text-[10px] lg:text-[11px] xl:text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-2 leading-tight">{t.pill3}</div>
                   </div>
                 </div>
 
-                <div className="hidden md:block w-px h-8 bg-zinc-800 self-center" />
-
                 {/* Pill segment 4 */}
-                <div className="flex items-center space-x-3 px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full transition-colors flex-1">
-                  <MapPin size={20} className="text-brand-primary flex-shrink-0" />
-                  <div className="text-left">
-                    <div className="text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">APIMTIS</div>
-                    <div className="text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-1">{t.pill4}</div>
+                <div className="flex items-center space-x-2 px-3 md:px-2 lg:px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full md:border-r border-zinc-800/80 last:border-r-0 transition-colors">
+                  <MapPin size={18} className="text-brand-primary flex-shrink-0" />
+                  <div className="text-left min-w-0">
+                    <div className="text-[9px] lg:text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">{t.pill4_lbl}</div>
+                    <div className="text-[10px] lg:text-[11px] xl:text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-2 leading-tight">{t.pill4}</div>
+                  </div>
+                </div>
+
+                {/* Pill segment 5 */}
+                <div className="flex items-center space-x-2 px-3 md:px-2 lg:px-4 py-2 hover:bg-white/5 rounded-xl md:rounded-full md:border-r border-zinc-800/80 last:border-r-0 transition-colors">
+                  <Ruler size={18} className="text-brand-primary flex-shrink-0" />
+                  <div className="text-left min-w-0">
+                    <div className="text-[9px] lg:text-[10px] font-mono tracking-wider text-brand-gray font-bold line-clamp-1">{t.pill5_lbl}</div>
+                    <div className="text-[10px] lg:text-[11px] xl:text-xs font-sans font-extrabold text-white tracking-wide uppercase line-clamp-2 leading-tight">{t.pill5}</div>
                   </div>
                 </div>
 
@@ -217,19 +202,19 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                   style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800')` }}
                 />
                 
-                {/* Natural forest sky environment layer behind tombstone mockup */}
+                {/* Natural forest sky environment layer behind granite slab mockup */}
                 <div className="absolute bottom-0 inset-x-0 h-[65%] bg-gradient-to-t from-emerald-950/20 via-neutral-900/60 to-transparent z-0" />
                 <div className="absolute bottom-4 left-6 right-6 top-8 rounded-2xl overflow-hidden bg-zinc-950/40 border border-zinc-800 flex items-center justify-center">
                   
-                  {/* Visual Representation of Cemetery setting (tombstones, gravel garden) */}
+                  {/* Visual Representation of granite stone display */}
                   <div className="absolute inset-0 bg-center bg-cover transition-transform duration-[8s] hover:scale-105" 
                        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1594498653385-d527250c8fc0?auto=format&fit=crop&q=80&w=800')` }} 
                   />
                   
-                  {/* Slabs / Tombstone Showcase Graphic Elements */}
+                  {/* Slabs Showcase Graphic Elements */}
                   <div className="absolute inset-0 flex items-end justify-center p-6 space-x-4 bg-gradient-to-t from-neutral-950 via-transparent to-transparent">
                     
-                    {/* Polish black granite specimen tombstone (representing the image detail) */}
+                    {/* Polish black granite specimen slab (representing the image detail) */}
                     <div 
                       onClick={() => handleSpecimenClick('black')}
                       className="relative w-[32%] h-[65%] bg-neutral-900 border-l border-t border-zinc-700/60 rounded-t-lg shadow-2xl flex flex-col justify-end overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300 group/slab cursor-pointer"
@@ -241,9 +226,11 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-black via-zinc-900/40 to-zinc-700/10" />
-                      <div className="relative text-center space-y-2 z-10 py-4">
+                      <div className="relative text-center space-y-2 z-10 py-4 px-1">
                         <div className="w-1.5 h-1.5 mx-auto bg-brand-primary rounded-full shadow-[0_0_8px_rgba(112,179,36,0.6)]" />
-                        <div className="text-[7px] font-serif text-white/80 tracking-widest font-bold drop-shadow-md">STEDILIS</div>
+                        <div className="text-[7px] font-serif text-white/80 tracking-widest font-bold drop-shadow-md uppercase truncate">
+                          {graniteSpecimens.find(s => s.id === 'black')?.name}
+                        </div>
                       </div>
                     </div>
 
@@ -262,13 +249,15 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                       <div className="relative flex justify-between items-center px-2 z-10 pt-2">
                         <div className="w-3 h-3 bg-brand-primary rounded-full flex items-center justify-center text-[6px] font-black text-white shadow-lg">★</div>
                       </div>
-                      <div className="relative text-center py-4 z-10">
-                        <div className="text-[8px] font-sans text-brand-primary tracking-widest font-black uppercase drop-shadow-md">MB STOUNAS</div>
+                      <div className="relative text-center py-4 z-10 px-1">
+                        <div className="text-[7px] font-sans text-brand-primary tracking-widest font-black uppercase drop-shadow-md truncate">
+                          {graniteSpecimens.find(s => s.id === 'gray')?.name}
+                        </div>
                         <div className="text-[6px] font-mono text-zinc-300 tracking-wider">PREMIUM CO</div>
                       </div>
                     </div>
 
-                    {/* Dark grey wave modern style tombstone */}
+                    {/* Dark grey wave modern style slab */}
                     <div 
                       onClick={() => handleSpecimenClick('aurora')}
                       className="relative w-[28%] h-[60%] bg-zinc-900 border-r border-t border-zinc-700/60 rounded-tr-3xl rounded-tl-sm shadow-2xl flex flex-col justify-end overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300 group/slab-dark cursor-pointer"
@@ -280,8 +269,10 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tl from-neutral-900/90 to-transparent" />
-                      <div className="relative text-center py-2 z-10">
-                        <div className="text-[7px] font-serif text-white/70 tracking-widest font-bold">AURORA</div>
+                      <div className="relative text-center py-2 z-10 px-1">
+                        <div className="text-[7px] font-serif text-white/70 tracking-widest font-bold uppercase truncate">
+                          {graniteSpecimens.find(s => s.id === 'aurora')?.name}
+                        </div>
                       </div>
                     </div>
 

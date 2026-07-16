@@ -13,7 +13,6 @@ export default function Services({ currentLang, hideDetailedList = false }: Serv
   const services = [
     { icon: <Layers size={32} />, title: t.serv1_title, desc: t.serv1_desc },
     { icon: <Construction size={32} />, title: t.serv2_title, desc: t.serv2_desc },
-    { icon: <Ruler size={32} />, title: t.serv4_title, desc: t.serv4_desc },
   ];
 
   return (
