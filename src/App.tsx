@@ -15,14 +15,12 @@ import QualityPage from './pages/QualityPage';
 import ContactPage from './pages/ContactPage';
 
 const backgrounds = [
-  'bg_granite_quarry.jpg',
-  'bg_dark_stone.jpg',
-  'bg_granite_wall.jpg',
-  'bg_landscape.jpg',
-  'bg_construction_stone.jpg',
+  'bg_user_quarry2.jpg',
+  'bg_user_quarry3.jpg',
   'bg_quarry.jpg',
   'bg_hands.jpg',
   'bg_warehouse.jpg',
+  'bg_user_warehouse2.jpg',
 ];
 
 export default function App() {

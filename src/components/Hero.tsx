@@ -32,7 +32,7 @@ export default function Hero({ currentLang, onContactClick, onSelectSpecimen }: 
   };
 
   return (
-    <section className="relative min-h-[105vh] bg-neutral-950 flex flex-col justify-center overflow-hidden pt-24 pb-16">
+    <section className="relative min-h-[105vh] bg-transparent flex flex-col justify-center overflow-hidden pt-24 pb-16">
       
       {/* Background enhancements on top of fixed app background */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
