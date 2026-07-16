@@ -31,8 +31,8 @@ export default function App() {
     <Router>
       <div className="bg-neutral-950 min-h-screen text-zinc-100 font-sans selection:bg-brand-primary selection:text-brand-dark antialiased flex flex-col relative overflow-x-hidden">
         
-        {/* App-wide fixed background */}
-        <div className="fixed inset-0 z-0 select-none pointer-events-none">
+        {/* App-wide scrolling background (scrolls with content — reveals more of tall photos on mobile) */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
           {/* Background image */}
           <img
             src={`${import.meta.env.BASE_URL}${backgrounds[bgIndex]}`}
