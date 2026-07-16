@@ -39,9 +39,9 @@ export default function App() {
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
           />
           {/* Dark overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/85 via-zinc-900/75 to-neutral-950/85" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(112,179,36,0.06),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(112,179,36,0.03),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/60 via-zinc-900/50 to-neutral-950/60" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(112,179,36,0.08),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(112,179,36,0.04),transparent_50%)]" />
           
           {/* Granite crystalline texture */}
           <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/granite.png')]" />
