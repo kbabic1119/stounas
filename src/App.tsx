@@ -20,6 +20,9 @@ const backgrounds = [
   'bg_granite_wall.jpg',
   'bg_landscape.jpg',
   'bg_construction_stone.jpg',
+  'bg_quarry.jpg',
+  'bg_hands.jpg',
+  'bg_warehouse.jpg',
 ];
 
 export default function App() {
