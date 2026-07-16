@@ -31,13 +31,13 @@ export default function App() {
     <Router>
       <div className="bg-neutral-950 min-h-screen text-zinc-100 font-sans selection:bg-brand-primary selection:text-brand-dark antialiased flex flex-col relative overflow-x-hidden">
         
-        {/* App-wide scrolling background (scrolls with content — reveals more of tall photos on mobile) */}
-        <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          {/* Background image */}
+        {/* App-wide fixed background — covers viewport only = no quality loss */}
+        <div className="fixed inset-0 z-0 select-none pointer-events-none">
+          {/* Background image — slightly oversized for subtle parallax movement */}
           <img
             src={`${import.meta.env.BASE_URL}${backgrounds[bgIndex]}`}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+            className="fixed inset-x-0 top-1/2 -translate-y-1/2 w-full h-[110vh] object-cover transition-opacity duration-700"
           />
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/60 via-zinc-900/50 to-neutral-950/60" />
