@@ -25,6 +25,8 @@ jobs:
         run: |
           npm ci
           npm run build
+        env:
+          VITE_BASE_PATH: /stounas/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
